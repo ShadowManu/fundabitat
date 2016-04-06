@@ -28,6 +28,10 @@
   "dependencies": {
     "hapi": "^13.3.0",
     "inert": "^3.2.0",
+    "jspm": "^0.16.32",
     "typings": "^0.7.12"
+  },
+  "jspm": {
+    "dependencies": {}
   }
 }
