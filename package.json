@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/ShadowManu/fundabitat#readme",
   "dependencies": {
+    "hapi": "^13.3.0",
+    "inert": "^3.2.0",
     "typings": "^0.7.12"
   }
 }
