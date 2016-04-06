@@ -4,6 +4,7 @@
   "description": "Homepage of the Fundabitat Project",
   "main": "server.js",
   "scripts": {
+    "postinstall": "jspm install && typings && gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
