@@ -12,16 +12,8 @@ export function About(): any {
     controller: AboutCtrl,
 
     controllerAs: 'a',
-    templateUrl: 'statics/about.html'
+    templateUrl: 'statics/about/about.html'
   };
 }
 
-export class AboutCtrl {
-
-  public static $inject: string[] = [];
-
-  constructor() {
-
-  }
-
-}
+export class AboutCtrl { }

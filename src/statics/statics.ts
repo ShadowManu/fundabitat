@@ -1,8 +1,13 @@
+import {About} from "./about/about";
 'use strict';
 
 import * as angular from 'angular';
 import {Home} from './home';
-import {About} from './about';
+
+import {About} from './about/about';
+import {Mission} from './about/mission';
+
+import {Navbar} from './navbar';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -28,11 +33,20 @@ angular.module(NAME, DEPS)
 
   .state('about', {
     url: '/nosotros',
-    template: "<about></about>"
+    template: '<about></about>'
+  })
+
+  .state('about.mission', {
+    url: '/mision',
+    template: "<about-mission></about-mission>"
   });
 
 }])
 
 // Directives
 .directive('home', Home)
-.directive('about', About);
+
+.directive('about', About)
+.directive('aboutMission', Mission)
+
+.directive('navbar', Navbar);
