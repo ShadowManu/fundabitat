@@ -39,6 +39,8 @@
     "typings": "^0.7.12"
   },
   "jspm": {
-    "dependencies": {}
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.3"
+    }
   }
 }
