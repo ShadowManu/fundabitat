@@ -1,0 +1,31 @@
+{
+  "name": "fundabitat",
+  "version": "0.1.0",
+  "description": "Homepage of the Fundabitat Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShadowManu/fundabitat.git"
+  },
+  "keywords": [
+    "fundabitat",
+    "anar",
+    "arte",
+    "rupestre",
+    "angularjs",
+    "material"
+  ],
+  "author": "Manuel Pacheco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShadowManu/fundabitat/issues"
+  },
+  "homepage": "https://github.com/ShadowManu/fundabitat#readme",
+  "dependencies": {
+    "typings": "^0.7.12"
+  }
+}

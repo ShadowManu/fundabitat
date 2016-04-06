@@ -1,0 +1,15 @@
+## CORE
+
+
+## BUILD
+
+# npm libraries
+node_modules
+
+
+## TOOLS
+# Webstorm
+/.idea/
+
+
+## OS
