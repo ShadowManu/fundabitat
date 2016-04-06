@@ -8,10 +8,19 @@ import 'app.css!';
 
 // Global Libraries
 import 'angular-material';
+import 'angular-ui-router';
 
-export const NAME = "fh";
+// Configs
+import './app-routes'
+
+// Application Modules
+import 'statics/statics';
+
+export const NAME = 'fd';
 export const DEPS = [
-  'ngMaterial'
+  'ngMaterial',
+  'fd.routes',
+  'fd.statics'
 ];
 
 // Application Setup
