@@ -4,24 +4,19 @@ h1 Relaciones
 p FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y del exterior.
 
 h2 Nacionales
-
-p UCV –Universidad Central de Venezuela.
-p UJMV –Universidad José María Vargas.
-p USB –Universidad Simón Bolívar.
-p FUNDACIÓN TAMAYO
-p INGEOLAN
-p IARTES
+ul.nationals
+  li(ng-repeat="n in r.nationals")
+    span.name {{n.name}}
+    span.description {{n.description}}
 
 h2 Internacionales
-
-p OEA –Organización de Estados Americanos.
-p UNESCO –Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura.
-p PNUD – Programa de las Naciones Unidas para el Desarrollo.
-p FAO –Organización de las Naciones Unidas para la Agricultura y la Alimentación.
-p OTCA –Organización del Tratado de Cooperación Amazónica.
-p CRATerre/EAG –Centre International de Construction en Terre/Ecole d´Architecture de Grenoble (Francia)p
+ul.internationals
+  li(ng-repeat="n in r.internationals")
+    span.name {{n.name}}
+    span.description {{n.description}}
 
 h2 FUNDABITAT ha sido admitida como miembro de:
-
-p UNAMAZ –Asociación de Universidades Amazónicas.
-p IFRAO/UNESCO –International Federation of Rock Art Organizations.
+ul.members
+  li(ng-repeat="n in r.members")
+    span.name {{n.name}}
+    span.description {{n.description}}
