@@ -1,5 +1,7 @@
 'use strict';
 
+import 'statics/about/relations.css!';
+
 export function Relations():any {
   return {
     restrict: 'E',
@@ -23,7 +25,7 @@ export class RelationsCtrl {
     { name: 'UCV', description: 'Universidad Central de Venezuela' },
     { name: 'UJMV', description: 'Universidad José María Vargas' },
     { name: 'USB', description: 'Universidad Simón Bolívar' },
-    { name: 'FUNDACIÖN TAMAYO' },
+    { name: 'FUNDACIÓN TAMAYO' },
     { name: 'INGEOLAN' },
     { name: 'IARTES'}
   ];
@@ -34,7 +36,8 @@ export class RelationsCtrl {
     { name: 'PNUD', description: 'Programa de las Naciones Unidas para el Desarrollo' },
     { name: 'FAO', description: 'Organización de las Naciones Unidas para la Agricultura y la Alimentación' },
     { name: 'OTCA', description: 'Organización del Tratado de Cooperación Amazónica' },
-    { nmae: 'CRATerre/EAG', description: 'Centre International de Construction en Terre/Ecole d´Architecture de Grenoble (Francia)' }
+    { name: 'CRATerre/EAG', description: 'Centre International de Construction en Terre/Ecole d´Architecture de' +
+    ' Grenoble (Francia)' }
   ];
 
   public members: any = [
