@@ -22,7 +22,7 @@ export function Relations():any {
 export class RelationsCtrl {
 
   public nationals: any = [
-    { name: 'UCV', description: 'Universidad Central de Venezuela' },
+    { name: 'UCV', description: 'Universidad Central de Venezuela'},
     { name: 'UJMV', description: 'Universidad José María Vargas' },
     { name: 'USB', description: 'Universidad Simón Bolívar' },
     { name: 'FUNDACIÓN TAMAYO' },

@@ -5,18 +5,21 @@ p FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OG
 
 h2 Nacionales
 ul.nationals
-  li(ng-repeat="n in r.nationals")
-    span.name {{n.name}}
-    span.description {{n.description}}
+  div(layout="row" layout-xs="column" layout-wrap)
+    div(flex="50" ng-repeat="n in r.nationals")
+      span.name {{n.name}}
+      span.description {{n.description}}
 
 h2 Internacionales
 ul.internationals
-  li(ng-repeat="n in r.internationals")
-    span.name {{n.name}}
-    span.description {{n.description}}
+  div(layout="row" layout-xs="column" layout-wrap)
+    div(flex="50" ng-repeat="n in r.internationals")
+      span.name {{n.name}}
+      span.description {{n.description}}
 
 h2 FUNDABITAT ha sido admitida como miembro de:
 ul.members
-  li(ng-repeat="n in r.members")
-    span.name {{n.name}}
-    span.description {{n.description}}
+  div(layout="row" layout-xs="column" layout-wrap)
+    div(flex="50" ng-repeat="n in r.members")
+      span.name {{n.name}}
+      span.description {{n.description}}
