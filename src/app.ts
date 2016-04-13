@@ -24,4 +24,13 @@ export const DEPS = [
 ];
 
 // Application Setup
-angular.module(NAME, DEPS);
+angular.module(NAME, DEPS)
+    
+// Configuring Material Theme
+.config(['$mdThemingProvider', function($mdThemingProvider) {
+  
+  $mdThemingProvider.theme('default')
+    .primaryPalette('orange')
+    .accentPalette('light-green');
+}]);
+
