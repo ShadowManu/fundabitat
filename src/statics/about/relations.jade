@@ -1,26 +1,33 @@
 doctype html
-h1 Relaciones
 
-p FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y del exterior.
+//TODO move style to scss
 
-//TODO add images
-h2 Nacionales
+h1(style="margin-left: 1cm") Relaciones
+
+p(style="margin-left: 1cm; margin-right: 2cm")
+  |FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y
+  |del exterior.
+
+h2(style="margin-left: 1cm") Nacionales
 ul.nationals
   div(layout="row" layout-xs="column" layout-wrap)
     div(flex="50" ng-repeat="n in r.nationals")
-      span.name {{n.name}}
-      span.description {{n.description}}
+      img(ng-src="{{n.image}}" align="middle")
+      div.name {{n.name}}
+      div.description {{n.description}}
 
-h2 Internacionales
+h2(style="margin-left: 1cm") Internacionales
 ul.internationals
   div(layout="row" layout-xs="column" layout-wrap)
     div(flex="50" ng-repeat="n in r.internationals")
-      span.name {{n.name}}
-      span.description {{n.description}}
+      img(ng-src="{{n.image}}" align="middle")
+      div.name {{n.name}}
+      div.description {{n.description}}
 
-h2 FUNDABITAT ha sido admitida como miembro de:
+h2(style="margin-left: 1cm") FUNDABITAT ha sido admitida como miembro de:
 ul.members
   div(layout="row" layout-xs="column" layout-wrap)
     div(flex="50" ng-repeat="n in r.members")
-      span.name {{n.name}}
-      span.description {{n.description}}
+      img(ng-src="{{n.image}}" align="middle")
+      div.name {{n.name}}
+      div.description {{n.description}}
