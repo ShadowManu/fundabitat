@@ -7,6 +7,8 @@ import {About} from './about/about';
 import {Mission} from './about/mission';
 import {Relations} from './about/relations';
 
+import {Areas} from './areas';
+
 import {Navbar} from './navbar';
 
 export const NAME: string = 'fd.statics';
@@ -45,6 +47,12 @@ angular.module(NAME, DEPS)
     url: '/relaciones',
     template: "<about-relations></about-relations>"
   })
+
+  .state('areas', {
+    url: '/areas',
+    template: '<areas></areas>'
+  })
+
   ;
 
 }])
@@ -55,5 +63,7 @@ angular.module(NAME, DEPS)
 .directive('about', About)
 .directive('aboutMission', Mission)
 .directive('aboutRelations', Relations)
+
+.directive('areas', Areas)
 
 .directive('navbar', Navbar);
