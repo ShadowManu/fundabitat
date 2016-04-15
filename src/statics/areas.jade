@@ -10,6 +10,6 @@ p
 div(layout="row" layout-padding layout-align="center" layout-wrap)
   div(layout="row" flex="33" ng-repeat="n in a.areas")
     md-card
-      img(ng-src="{{n.image}}" class="md-card-image" alt="Washed Out")
+      img.md-card-image(ng-src="{{n.image}}" alt="{{n.name}}")
       md-card-content(layout="row" layout-align="center center")
         span {{n.name}}
