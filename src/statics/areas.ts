@@ -1,5 +1,7 @@
 'use strict';
 
+import 'statics/areas.css!';
+
 export function Areas(): any {
   return {
     restrict: 'E',
