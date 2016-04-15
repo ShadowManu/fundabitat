@@ -17,7 +17,7 @@ export function Navbar(): any {
     controller: NavbarCtrl,
 
     controllerAs: 'n',
-    templateUrl: 'statics/navbar.html'
+    templateUrl: 'shared/navbar/navbar.html'
   };
 }
 
