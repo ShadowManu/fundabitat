@@ -7,6 +7,9 @@ p
   |  realiza trabajos de investigación y asesoramiento en el ámbito regional, promoviendo el intercambio de experiencias
   |de desarrollo alternativo en:
 
-ul
-  li(ng-repeat="n in ar.areas")
-    spam {{n}}
+div(layout="row" layout-padding layout-align="center" layout-wrap)
+  div(layout="row" flex="33" ng-repeat="n in a.areas")
+    md-card
+      img(ng-src="{{n.image}}" class="md-card-image" alt="Washed Out")
+      md-card-content(layout="row" layout-align="center center")
+        span {{n.name}}
