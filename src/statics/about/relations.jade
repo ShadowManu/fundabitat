@@ -8,7 +8,7 @@ p
 
 h2 Nacionales
 ul.nationals
-  div(layout="row" layout-xs="column" layout-wrap layout-padding)
+  div(layout="row" layout-padding layout-wrap)
     div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.nationals")
       img(ng-src="{{n.image}}")
       div.name {{n.name}}
@@ -16,7 +16,7 @@ ul.nationals
 
 h2 Internacionales
 ul.internationals
-  div(layout="row" layout-xs="column" layout-wrap layout-padding)
+  div(layout="row" layout-padding layout-wrap)
     div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.internationals")
       img(ng-src="{{n.image}}")
       div.name {{n.name}}
@@ -24,7 +24,7 @@ ul.internationals
 
 h2 FUNDABITAT ha sido admitida como miembro de:
 ul.members
-  div(layout="row" layout-xs="column" layout-wrap layout-padding)
+  div(layout="row" layout-padding layout-wrap)
     div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.members")
       img(ng-src="{{n.image}}")
       div.name {{n.name}}
