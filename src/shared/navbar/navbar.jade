@@ -1,0 +1,10 @@
+doctype html
+md-sidenav.md-sidenav-left(md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whiteframe="4")
+  md-toolbar
+    h1.md-toolbar-tools FUNDABITAT
+  md-content
+    ul(layout="column")
+      a(ng-repeat="link in n.links" ui-sref="{{link.state}}")
+        li
+          // TODO ADD ICON
+          | {{link.name}}

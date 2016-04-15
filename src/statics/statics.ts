@@ -9,12 +9,10 @@ import {Relations} from './about/relations';
 
 import {Areas} from './areas';
 
-import {Navbar} from './navbar';
-
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
   'ngMaterial',
-  'ui.router',
+  'ui.router'
 ];
 
 // Register Module
@@ -64,6 +62,4 @@ angular.module(NAME, DEPS)
 .directive('aboutMission', Mission)
 .directive('aboutRelations', Relations)
 
-.directive('areas', Areas)
-
-.directive('navbar', Navbar);
+.directive('areas', Areas);

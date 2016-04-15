@@ -11,7 +11,9 @@ html(lang="eng")
 
   body(ng-cloak ng-app="fd")
 
-    ui-view
+    div(layout="row" layout-fill)
+      navbar
+      ui-view(flex)
 
     <!-- build:development -->
     script(type="text/javascript" src="/jspm_packages/system.js")
