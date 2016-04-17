@@ -1,5 +1,7 @@
 'use strict';
 
+import 'statics/about/mission.css!';
+
 export function Mission(): any {
   return {
     restrict: 'E',

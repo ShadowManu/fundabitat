@@ -1,0 +1,17 @@
+doctype html
+md-sidenav.md-sidenav-left(md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whiteframe="4")
+  a(ui-sref="home")
+    md-toolbar
+      h1.md-toolbar-tools FUNDABITAT
+  md-content
+    ul(layout="column")
+      div(ng-repeat="link in n.links")
+        a(ui-sref="{{link.state}}"): li
+          // TODO ADD ICON
+          | {{link.name}}
+
+        // Child views
+        a(ng-repeat="child in link.childs" ui-sref="{{child.state}}")
+          li
+            // TODO ADD ICON
+            | - {{child.name}}

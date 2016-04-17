@@ -1,5 +1,7 @@
 'use strict';
 
+import 'statics/home.css!';
+
 export function Home(): any {
   return {
     restrict: 'E',

@@ -1,4 +1,3 @@
-import {About} from "./about/about";
 'use strict';
 
 import * as angular from 'angular';
@@ -6,13 +5,14 @@ import {Home} from './home';
 
 import {About} from './about/about';
 import {Mission} from './about/mission';
+import {Relations} from './about/relations';
 
-import {Navbar} from './navbar';
+import {Areas} from './areas';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
   'ngMaterial',
-  'ui.router',
+  'ui.router'
 ];
 
 // Register Module
@@ -39,7 +39,19 @@ angular.module(NAME, DEPS)
   .state('about.mission', {
     url: '/mision',
     template: "<about-mission></about-mission>"
-  });
+  })
+
+  .state('about.relations', {
+    url: '/relaciones',
+    template: "<about-relations></about-relations>"
+  })
+
+  .state('areas', {
+    url: '/areas',
+    template: '<areas></areas>'
+  })
+
+  ;
 
 }])
 
@@ -48,5 +60,6 @@ angular.module(NAME, DEPS)
 
 .directive('about', About)
 .directive('aboutMission', Mission)
+.directive('aboutRelations', Relations)
 
-.directive('navbar', Navbar);
+.directive('areas', Areas);
