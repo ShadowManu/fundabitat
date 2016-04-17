@@ -1,0 +1,31 @@
+doctype html
+
+h1 Relaciones
+
+p
+  |FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y
+  |del exterior.
+
+h2 Nacionales
+ul.nationals
+  div(layout="row" layout-padding layout-wrap)
+    div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.nationals")
+      img(ng-src="{{n.image}}")
+      div.name {{n.name}}
+      div.description {{n.description}}
+
+h2 Internacionales
+ul.internationals
+  div(layout="row" layout-padding layout-wrap)
+    div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.internationals")
+      img(ng-src="{{n.image}}")
+      div.name {{n.name}}
+      div.description {{n.description}}
+
+h2 FUNDABITAT ha sido admitida como miembro de:
+ul.members
+  div(layout="row" layout-padding layout-wrap)
+    div(layout="column" layout-align="center center" flex="50" ng-repeat="n in r.members")
+      img(ng-src="{{n.image}}")
+      div.name {{n.name}}
+      div.description {{n.description}}

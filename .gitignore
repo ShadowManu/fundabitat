@@ -4,8 +4,11 @@
 ## BUILD
 
 # npm libraries
-node_modules
-
+/node_modules/
+# jspm libraries
+/jspm_packages/
+# build files
+/dist/
 
 ## TOOLS
 # Webstorm

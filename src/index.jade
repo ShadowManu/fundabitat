@@ -1,0 +1,26 @@
+doctype html
+html(lang="eng")
+  head
+    title Fundabitat - Página Oficial
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#0F4A46")
+
+    // TODO INTEGRATE ONTO JSPM
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300")
+
+  body(ng-cloak ng-app="fd")
+
+    div(layout="row" layout-fill)
+      navbar(layout="row")
+      ui-view(flex)
+
+    <!-- build:development -->
+    script(type="text/javascript" src="/jspm_packages/system.js")
+    script(type="text/javascript" src="config.js")
+    script(type="text/javascript") System.import('app.js');
+    <!-- endbuild -->
+
+    <!-- build:production -->
+    <!-- TODO SINCE USING NEW JSPM -->
+    <!-- endbuild -->
