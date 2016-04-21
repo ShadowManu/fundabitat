@@ -37,8 +37,6 @@ export class NavbarCtrl {
         name: 'Quienes Somos',
         state: 'about',
         childs: [
-          { name: 'Misión y Visión', state: 'about.mission' },
-          { name: 'Objetivos', state: 'about.goals' },
           { name: 'Nuestro equipo', state: 'about.team' },
           { name: 'Relaciones', state: 'about.relations' },
         ]
