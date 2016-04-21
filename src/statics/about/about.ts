@@ -1,5 +1,7 @@
 'use strict';
 
+import 'statics/about/about.css!';
+
 export function About(): any {
   return {
     restrict: 'E',
