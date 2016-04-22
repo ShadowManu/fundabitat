@@ -34,17 +34,17 @@ angular.module(NAME, DEPS)
   })
 
   .state('landing', {
-    url: '/landing',
+    url: 'landing',
     template: '<home></home>'
   })
 
   .state('root.about', {
-    url: '/nosotros',
+    url: 'nosotros',
     template: '<about></about>'
   })
 
-  .state('root.about.relations', {
-    url: '/relaciones',
+  .state('root.relations', {
+    url: 'nosotros/relaciones',
     template: "<about-relations></about-relations>"
   })
 
