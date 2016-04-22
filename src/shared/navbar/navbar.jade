@@ -1,17 +1,15 @@
 doctype html
-md-sidenav.md-sidenav-left(md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whiteframe="4")
-  a(ui-sref="home")
-    md-toolbar
-      h1.md-toolbar-tools FUNDABITAT
-  md-content
-    ul(layout="column")
-      div(ng-repeat="link in n.links")
-        a(ui-sref="{{link.state}}"): li
-          // TODO ADD ICON
-          | {{link.name}}
+md-sidenav.md-sidenav-left(md-colors="{background: 'primary'}"
+md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whiteframe="4")
+  // SIDENAV HEADER
+  p(ui-sref="root") [Fundabitat logo here]
 
-        // Child views
-        a(ng-repeat="child in link.childs" ui-sref="{{child.state}}")
-          li
-            // TODO ADD ICON
-            | - {{child.name}}
+  // SIDENAV LINKS
+  md-content
+    div(layout="column" ng-repeat="link in n.links")
+
+      md-button.md-primary.md-raised.md-cornered(ui-state="link.state" ui-sref-active="md-accent"
+      md-colors="{background: 'primary', color: 'white'}") {{link.name}}
+
+      md-button.md-primary.md-raised.md-cornered(ng-repeat="child in link.childs"
+      ui-state="child.state" ui-sref-active="md-accent") --- {{child.name}}
