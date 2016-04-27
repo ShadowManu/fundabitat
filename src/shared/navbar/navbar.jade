@@ -8,8 +8,7 @@ md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whitefram
   md-content
     div(layout="column" ng-repeat="link in n.links")
 
-      a.md-button.md-primary.md-raised.md-cornered(ui-state="link.state" ui-sref-active="md-accent"
-      md-colors="{background: 'primary', color: 'white'}") {{link.name}}
+      a.md-button.md-primary.md-raised.md-cornered(ui-state="link.state" ui-sref-active="md-accent") {{link.name}}
 
       a.md-button.md-primary.md-raised.md-cornered.child(ng-repeat="child in link.childs"
       ui-state="child.state" ui-sref-active="md-accent") {{child.name}}
