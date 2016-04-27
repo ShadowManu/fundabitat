@@ -6,6 +6,12 @@ navbar {
       .md-button {
         box-shadow: none !important;
         margin: 0;
+
+        text-align: left;
+        padding-left: 10%;
+      }
+      .child {
+        padding-left: 20%;
       }
     }
   }
