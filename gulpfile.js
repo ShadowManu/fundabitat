@@ -10,8 +10,13 @@ const replace = require('gulp-html-replace');
 // CSS Processors
 const sass = require('gulp-sass');
 
+// Typescript Processors
+const gts = require('gulp-typescript');
+const tsproj = gts.createProject('tsconfig.json');
+
 // Helpers
 const sourcemaps = require('gulp-sourcemaps');
+const merge = require('merge2');
 const shell = require('gulp-shell');
 
 // Environment constants
@@ -24,12 +29,8 @@ gulp.task('default', ['setup']);
 gulp.task('setup', [
   'setup:jade',
   'setup:sass',
-  'setup:js',
   'setup:ts',
-  'setup:otf',
-  'setup:css',
-  'setup:png',
-  'setup:svg'
+  'setup:static'
 ]);
 
 // Watch
@@ -61,34 +62,25 @@ gulp.task('setup:sass', function() {
 });
 
 // Process typescript
-gulp.task('setup:ts', shell.task('tsc'));
+gulp.task('setup:ts', function() {
+  let results = tsproj.src()
+    .pipe(gts(tsproj));
 
-// Copy js
-gulp.task('setup:js', function() {
-  return gulp.src('src/**/*.js')
-    .pipe(gulp.dest('dist'));
+  return merge([
+    results.js.pipe(gulp.dest('dist')),
+    results.dts.pipe(gulp.dest('dist'))
+  ]);
 });
 
-// Copy otf fonts
-gulp.task('setup:otf', function() {
-  return gulp.src('src/**/*.otf')
-    .pipe(gulp.dest('dist'));
+// Copy static resources
+gulp.task('setup:static', function() {
+  return gulp.src([
+    'src/**/*.js',
+    'src/**/*.css',
+    'src/**/*.otf',
+    'src/**/*.png',
+    'src/**/*.svg'
+  ])
+  .pipe(gulp.dest('dist'));
 });
 
-// Copy css
-gulp.task('setup:css', function() {
-  return gulp.src('src/**/*.css')
-    .pipe(gulp.dest('dist'));
-});
-
-// Copy images
-gulp.task('setup:png', function() {
-  return gulp.src('src/**/*.png')
-    .pipe(gulp.dest('dist'));
-});
-
-// Copy vectors
-gulp.task('setup:svg', function() {
-  return gulp.src('src/**/*.svg')
-    .pipe(gulp.dest('dist'));
-});

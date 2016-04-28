@@ -1,6 +1,9 @@
 'use strict';
 
 import * as angular from 'angular';
+
+import {Root} from './root/root';
+
 import {Home} from './home';
 
 import {About} from './about/about';
@@ -24,24 +27,29 @@ angular.module(NAME, DEPS)
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-
-  .state('home', {
+  
+  .state('root', {
     url: '/',
+    template: '<root></root>'
+  })
+
+  .state('landing', {
+    url: 'landing',
     template: '<home></home>'
   })
 
-  .state('about', {
-    url: '/nosotros',
+  .state('root.about', {
+    url: 'nosotros',
     template: '<about></about>'
   })
 
-  .state('about.relations', {
-    url: '/relaciones',
+  .state('root.relations', {
+    url: 'nosotros/relaciones',
     template: "<about-relations></about-relations>"
   })
 
-  .state('areas', {
-    url: '/areas',
+  .state('root.areas', {
+    url: 'areas',
     template: '<areas></areas>'
   })
 
@@ -50,6 +58,8 @@ angular.module(NAME, DEPS)
 }])
 
 // Directives
+  
+.directive('root', Root)
 .directive('home', Home)
 
 .directive('about', About)
