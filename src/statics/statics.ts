@@ -4,7 +4,6 @@ import * as angular from 'angular';
 import {Home} from './home';
 
 import {About} from './about/about';
-import {Mission} from './about/mission';
 import {Relations} from './about/relations';
 
 import {Areas} from './areas';
@@ -38,11 +37,6 @@ angular.module(NAME, DEPS)
     template: '<about></about>'
   })
 
-  .state('about.mission', {
-    url: '/mision',
-    template: "<about-mission></about-mission>"
-  })
-
   .state('about.relations', {
     url: '/relaciones',
     template: "<about-relations></about-relations>"
@@ -66,7 +60,6 @@ angular.module(NAME, DEPS)
 .directive('home', Home)
 
 .directive('about', About)
-.directive('aboutMission', Mission)
 .directive('aboutRelations', Relations)
 
 .directive('areas', Areas)
