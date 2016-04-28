@@ -1,3 +1,21 @@
 navbar {
-  width: 250px;
+  md-sidenav {
+    width: 250px;
+
+    img { width: 90%; }
+    md-divider { margin: 10px; }
+
+    md-content {
+      .md-button {
+        box-shadow: none !important;
+        margin: 0;
+
+        text-align: left;
+        padding-left: 10%;
+      }
+      .child {
+        padding-left: 20%;
+      }
+    }
+  }
 }
