@@ -55,8 +55,8 @@ angular.module(NAME, DEPS)
     template: '<areas></areas>'
   })
 
-    .state('programs', {
-      url: '/programas',
+    .state('root.programs', {
+      url: 'programas',
       template: '<programs></programs>'
     })
 
