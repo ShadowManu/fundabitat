@@ -8,5 +8,24 @@ programs {
     text-align: justify;
   }
 
+  div.text {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  span.year {
+    margin-right: 10px;
+  }
+
+  span.name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  img {
+    width: 300px;
+    float: right;
+    margin: 10px;
+  }
 }
 
