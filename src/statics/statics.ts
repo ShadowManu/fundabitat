@@ -11,6 +11,8 @@ import {Relations} from './about/relations';
 
 import {Areas} from './areas';
 
+import {Programs} from './programs';
+
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
   'ngMaterial',
@@ -53,6 +55,11 @@ angular.module(NAME, DEPS)
     template: '<areas></areas>'
   })
 
+    .state('root.programs', {
+      url: 'programas',
+      template: '<programs></programs>'
+    })
+
   ;
 
 }])
@@ -65,4 +72,7 @@ angular.module(NAME, DEPS)
 .directive('about', About)
 .directive('aboutRelations', Relations)
 
-.directive('areas', Areas);
+.directive('areas', Areas)
+
+.directive('programs', Programs);
+

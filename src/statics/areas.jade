@@ -1,15 +1,16 @@
 doctype html
-md-toolbar
-h1 Areas Temáticas
 
-p
-  b FUNDABITAT
-  |  realiza trabajos de investigación y asesoramiento en el ámbito regional, promoviendo el intercambio de experiencias
-  |de desarrollo alternativo en:
+div.areas
+  h1 Areas Temáticas
 
-div(layout="row" layout-padding layout-align="center" layout-wrap)
-  div(layout="row" flex="33" ng-repeat="n in a.areas")
-    md-card
-      img.md-card-image(ng-src="{{n.image}}" alt="{{n.name}}")
-      md-card-content(layout="row" layout-align="center center")
-        span {{n.name}}
+  p
+    b FUNDABITAT
+    |  realiza trabajos de investigación y asesoramiento en el ámbito regional, promoviendo el intercambio de experiencias
+    |de desarrollo alternativo en:
+
+  div(layout="row" layout-padding layout-align="center" layout-wrap)
+    div(layout="row" flex="33" ng-repeat="n in a.areas")
+      md-card
+        img.md-card-image(ng-src="{{n.image}}" alt="{{n.name}}")
+        md-card-content(layout="row" layout-align="center center")
+          span {{n.name}}

@@ -1,0 +1,52 @@
+doctype html
+
+div.programs
+  h1 Programas y Proyectos:
+
+  p
+    b FUNDABITAT
+    |  desarrolla los Proyectos, en el marco de sus
+    b  Programas de Formación y Capacitación:
+
+  h2 Piloto de Construcción con Tecnologías Apropiadas y Apropiables
+
+  p
+    |Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra, dando
+    |las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico regional
+    |y cultural.
+
+  ul.PCTAA
+    div(layout="row" ng-repeat="n in p.PCTAA")
+      div.text
+        img(ng-src="{{n.image}}")
+        span.year {{n.year}}
+        span.name {{n.name}}
+        span.others {{n.others}}
+
+  h2 Agentes de Salud
+
+  p
+    | Implementa acciones destinadas a generar autosuficiencia en las comunidades, para que puedan trabajar en función
+    |de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten
+    |programas en ésta área.
+
+  ul.AS
+    div(layout="row" ng-repeat="n in p.AS")
+      div.text
+        img(ng-src="{{n.image}}")
+        span.year {{n.year}}
+        span.name {{n.name}}
+        span.others {{n.others}}
+
+  h2 Facilitadores en Escuela Activa
+
+  p
+    | Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.
+
+  ul.FEA
+    div(layout="row" ng-repeat="n in p.FEA")
+      div.text
+        img(ng-src="{{n.image}}")
+        span.year {{n.year}}
+        span.name {{n.name}}
+        span.others {{n.others}}

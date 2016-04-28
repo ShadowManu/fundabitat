@@ -47,7 +47,7 @@ export class NavbarCtrl {
       },
       {
         name: 'Programas',
-        state: 'Facilitadores en Escuela Activa'
+        state: 'root.programs'
       },
     ]
 
