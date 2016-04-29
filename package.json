@@ -1,6 +1,6 @@
 {
   "name": "fundabitat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Homepage of the Fundabitat Project",
   "main": "server.js",
   "scripts": {
