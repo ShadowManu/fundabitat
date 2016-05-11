@@ -27,7 +27,6 @@ export class RelationsCtrl {
     { name: 'USB', description: 'Universidad Simón Bolívar', image: "/src/assets/images/relations/USB.png" },
     { name: 'FUNDACIÓN TAMAYO', image: "/src/assets/images/relations/FT.jpg" },
     { name: 'INGEOLAN', image: "/src/assets/images/relations/INGEOLAN.png" },
-    { name: 'IARTES', image: "/src/assets/images/relations/iartes.png"}
   ];
 
   public internationals: any = [
