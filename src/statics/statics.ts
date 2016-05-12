@@ -8,6 +8,7 @@ import {Home} from './home';
 
 import {About} from './about/about';
 import {Relations} from './about/relations';
+import {Team} from './about/team';
 
 import {Areas} from './areas';
 
@@ -50,6 +51,11 @@ angular.module(NAME, DEPS)
     template: "<about-relations></about-relations>"
   })
 
+  .state('root.team', {
+    url: 'nosotros/equipo',
+    template: "<about-team></about-team>"
+  })  
+
   .state('root.areas', {
     url: 'areas',
     template: '<areas></areas>'
@@ -71,6 +77,7 @@ angular.module(NAME, DEPS)
 
 .directive('about', About)
 .directive('aboutRelations', Relations)
+.directive('aboutTeam', Team)
 
 .directive('areas', Areas)
 
