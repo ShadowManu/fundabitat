@@ -22,32 +22,30 @@ export function Relations():any {
 export class RelationsCtrl {
 
   public nationals: any = [
-    { name: 'UCV', description: 'Universidad Central de Venezuela', image: "/src/assets/images/relations/UCV.png" },
-    { name: 'UJMV', description: 'Universidad José María Vargas', image: "/src/assets/images/relations/ujmv.jpg" },
-    { name: 'USB', description: 'Universidad Simón Bolívar', image: "/src/assets/images/relations/USB.png" },
-    { name: 'FUNDACIÓN TAMAYO', image: "/src/assets/images/relations/FT.jpg" },
-    { name: 'INGEOLAN', image: "/src/assets/images/relations/INGEOLAN.png" },
-    { name: 'IARTES', image: "/src/assets/images/relations/iartes.png"}
+    { name: 'UCV', link: 'http://www.ucv.ve/', image: "/src/assets/images/relations/UCV.png" },
+    { name: 'UJMV', link: 'http://ujmv.edu/', image: "/src/assets/images/relations/ujmv.jpg" },
+    { name: 'USB', link: 'http://www.usb.ve/', image: "/src/assets/images/relations/USB.png" },
+    { name: 'FUNDACIÓN TAMAYO', link: "http://www.fundaciontamayo.org.ve/", image: "/src/assets/images/relations/FT.jpg" },
+    { name: 'INGEOLAN', link: "http://www.ingeolan.com/", image: "/src/assets/images/relations/INGEOLAN.png" },
   ];
 
   public internationals: any = [
-    { name: 'OEA', description: 'Organización de Estados Americanos', image: "/src/assets/images/relations/OEA.png" },
-    { name: 'UNESCO', description: 'Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura',
+    { name: 'OEA', link: 'http://www.oas.org/es/', image: "/src/assets/images/relations/OEA.png" },
+    { name: 'UNESCO', link: 'http://es.unesco.org/',
       image: "/src/assets/images/relations/unesco.gif" },
-    { name: 'PNUD', description: 'Programa de las Naciones Unidas para el Desarrollo',
+    { name: 'PNUD', link: 'http://www.pnud.org.ve/',
       image: "/src/assets/images/relations/Logo_PNUD_Venezuela.png" },
-    { name: 'FAO', description: 'Organización de las Naciones Unidas para la Agricultura y la Alimentación',
+    { name: 'FAO', link: 'http://www.fao.org/home/es/',
       image: "/src/assets/images/relations/FAO.jpg" },
-    { name: 'OTCA', description: 'Organización del Tratado de Cooperación Amazónica',
+    { name: 'OTCA', link: 'http://www.otca.info/',
       image: "/src/assets/images/relations/otca.png" },
-    { name: 'CRATerre/EAG', description: 'Centre International de Construction en Terre/Ecole d´Architecture de' +
-    ' Grenoble (Francia)', image: "/src/assets/images/relations/Craterre.png" }
+    { name: 'CRATerre/EAG', link: 'http://craterre.org/', image: "/src/assets/images/relations/Craterre.png" }
   ];
 
   public members: any = [
-    { name: 'UNAMAZ', description: 'Asociación de Universidades Amazónicas',
+    { name: 'UNAMAZ', link: 'http://www.unamaz.org/site/index.php',
       image: "/src/assets/images/relations/UNAMAZ.png" },
-    { name: 'IFRAO/UNESCO', description: 'International Federation of Rock Art Organizations',
+    { name: 'IFRAO/UNESCO', link: 'http://www.ifrao.com/ifrao/',
       image: "/src/assets/images/relations/IFRAO.png" }
   ]
 }

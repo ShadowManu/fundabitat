@@ -116,7 +116,7 @@ export class ProgramsCtrl {
       year: "Desde 2011",
       name: "Creación y puesta en marcha del SISTEMA ANAR.",
       others: "Aplicaciones de:",
-      image: "/src/assets/images/programs/FEA/desde 2011.png"
+      image: ""
     },
     {
       year: "",
@@ -128,7 +128,7 @@ export class ProgramsCtrl {
       year: "",
       name: "• Base de Datos Geoespacial sobre las Manifestaciones Rupestres venezolanas.",
       others: "INGEOLAN, Ingeniería de Computación USB",
-      image: ""
+      image: "/src/assets/images/programs/FEA/desde 2011 - BD.png"
     },
     {
       year: "",
