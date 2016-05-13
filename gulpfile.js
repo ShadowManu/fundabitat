@@ -78,6 +78,7 @@ gulp.task('setup:static', function() {
     'src/**/*.js',
     'src/**/*.css',
     'src/**/*.otf',
+    'src/**/*.ttf',
     'src/**/*.png',
     'src/**/*.svg'
   ])
