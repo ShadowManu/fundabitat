@@ -17,5 +17,5 @@ div.publications
         img(ng-src="{{n.image}}")
         h2 {{n.title}}
         h3 {{n.author}}
-        p.description(ng-if="") {{n.description}}
+        p(ng-repeat="d in n.description") {{d}}
         hr
