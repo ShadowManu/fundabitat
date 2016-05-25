@@ -23,7 +23,7 @@ declare module 'angular-extras' {
   
   interface IDirective {
     (): IDirectiveObj;
-    name: string;
+    dirName: string;
     route: any[] | Function;
   }
 }

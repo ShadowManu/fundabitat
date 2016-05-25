@@ -2,11 +2,11 @@
 
 import { IDirective } from "angular-extras";
 
-export function DirectiveLoader(mod: any, components: IDirective[]) {
+export function DirectiveLoader(mod: any, components: Function[]) {
   components.forEach((comp: IDirective) => {
     
     // Load Directive
-    mod.directive(IDirective.name, IDirective);
+    mod.directive(comp.dirName, comp);
     
     // Load Route Configuration (if available)
     if (comp.route) mod.config(comp.route);

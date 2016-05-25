@@ -33,7 +33,7 @@ export function Directive(name: string, obj: IDirectiveObj): Function {
 
     // Setup directive
     let Directive: IDirective = <IDirective> function() { return dirOpts };
-    Directive.name = cc.camel(name);
+    Directive.dirName = cc.camel(name);
     
     return Directive;
   }
@@ -59,15 +59,11 @@ export function RouteConfig(data: any): Function {
       let paramName = cc.param(config.name);
 
       let name = cc.pascal(config.name);
-      let url = config.url || `/${paramName}`;
+      let url = (config.url != undefined) ? config.url : `/${paramName}`;
       let template = config.template || `<${paramName}></${paramName}>`;
+      let abstract = config.abstract || false;
 
-      $stateProvider
-      .state({
-        name: name,
-        url: url,
-        template: template
-      });
+      $stateProvider.state({ name, url, template, abstract });
     }];
   }
 
