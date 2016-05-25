@@ -6,10 +6,10 @@ import { DirectiveLoader } from '../shared/angular/loader';
 
 // Load Directives
 
-import {Areas} from './areas';
 import {Programs} from './programs';
 
 import { AboutComponent } from './about/about';
+import { AreasComponent } from './areas'
 import { LandingComponent } from './landing/landing';
 import { RelationsComponent } from './about/relations';
 import { RootComponent } from './root/root';
@@ -21,13 +21,13 @@ export const DEPS: string[] = [
   'ui.router'
 ];
 
-
 // Register Module
 export let module = angular.module(NAME, DEPS);
 
 // Load Components
 DirectiveLoader(module, [
   AboutComponent,
+  AreasComponent,
   LandingComponent,
   RelationsComponent,
   RootComponent,
@@ -42,11 +42,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
 
   $stateProvider
 
-  .state('Root.Areas', {
-    url: '/areas',
-    template: '<areas></areas>'
-  })
-
   .state('Root.Programs', {
     url: '/programas',
     template: '<programs></programs>'
@@ -59,6 +54,5 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
 // Directives
 
 module
-.directive('areas', Areas)
 .directive('programs', Programs);
 
