@@ -1,21 +1,16 @@
 'use strict';
 
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
+
 import 'statics/about/about.css!';
 
-export function About(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+export const NAME = 'Root.About';
 
-    require: '',
-    link: function(): any {},
-    controller: AboutCtrl,
-
-    controllerAs: 'a',
-    templateUrl: 'statics/about/about.html'
-  };
-}
-
-export class AboutCtrl { }
+@RouteConfig({
+  name: NAME,
+  url: '/nosotros',
+})
+@Directive(NAME, {
+  templateUrl: 'statics/about/about.html'
+})
+export class AboutComponent { }

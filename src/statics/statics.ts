@@ -5,15 +5,15 @@ import * as angular from 'angular';
 import { DirectiveLoader } from '../shared/angular/loader';
 
 // Load Directives
-import {About} from './about/about';
 
 import {Relations} from './about/relations';
 import {Team} from './about/team';
 import {Areas} from './areas';
 import {Programs} from './programs';
 
-import { RootComponent } from './root/root';
+import { AboutComponent } from './about/about';
 import { LandingComponent } from './landing/landing';
+import { RootComponent } from './root/root';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -27,8 +27,9 @@ export let module = angular.module(NAME, DEPS);
 
 // Load Components
 DirectiveLoader(module, [
-  RootComponent,
-  LandingComponent
+  AboutComponent,
+  LandingComponent,
+  RootComponent
 ]);
 
 // Routes
@@ -38,11 +39,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
   $urlRouterProvider.otherwise('/landing');
 
   $stateProvider
-
-  .state('Root.About', {
-    url: '/nosotros',
-    template: '<about></about>'
-  })
 
   .state('Root.Relations', {
     url: '/nosotros/relaciones',
@@ -71,7 +67,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
 // Directives
 
 module
-.directive('about', About)
 .directive('aboutRelations', Relations)
 .directive('aboutTeam', Team)
 .directive('areas', Areas)
