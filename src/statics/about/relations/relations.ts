@@ -1,8 +1,8 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../shared/angular/decorators';
+import { Directive, RouteConfig } from '../../../shared/angular/decorators';
 
-import 'statics/about/relations.css!';
+import './relations.css!';
 
 export const NAME = 'Root.Relations';
 
@@ -12,7 +12,7 @@ export const NAME = 'Root.Relations';
   template: '<about-relations></about-relations>'
 })
 @Directive('aboutRelations', {
-  templateUrl: 'statics/about/relations.html'
+  templateUrl: 'statics/about/relations/relations.html'
 })
 export class RelationsComponent {
 

@@ -1,8 +1,8 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../shared/angular/decorators';
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
 
-import 'statics/programs.css!';
+import './programs.css!';
 
 export const NAME = 'Root.Programs';
 
@@ -11,7 +11,7 @@ export const NAME = 'Root.Programs';
   url: '/programas'
 })
 @Directive(NAME, {
-  templateUrl: 'statics/programs.html'
+  templateUrl: 'statics/programs/programs.html'
 })
 export class ProgramsComponent {
 

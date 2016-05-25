@@ -4,13 +4,13 @@ import * as angular from 'angular';
 
 import { DirectiveLoader } from '../shared/angular/loader';
 
-import { AboutComponent } from './about/about';
-import { AreasComponent } from './areas'
-import { LandingComponent } from './landing/landing';
-import { ProgramsComponent } from './programs';
-import { RelationsComponent } from './about/relations';
+import { AboutComponent } from './about/main/about';
+import { AreasComponent } from './areas/areas'
+import { HomeComponent } from './home/home';
+import { ProgramsComponent } from './programs/programs';
+import { RelationsComponent } from './about/relations/relations';
 import { RootComponent } from './root/root';
-import { TeamComponent } from './about/team';
+import { TeamComponent } from './about/team/team';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -25,7 +25,7 @@ export let module = angular.module(NAME, DEPS);
 DirectiveLoader(module, [
   AboutComponent,
   AreasComponent,
-  LandingComponent,
+  HomeComponent,
   ProgramsComponent,
   RelationsComponent,
   RootComponent,
@@ -34,6 +34,6 @@ DirectiveLoader(module, [
 
 // Default location configuration
 module.config(['$urlRouterProvider', function($urlRouterProvider: any): void {
-  $urlRouterProvider.otherwise('/landing');
+  $urlRouterProvider.otherwise('/inicio');
 }]);
 
