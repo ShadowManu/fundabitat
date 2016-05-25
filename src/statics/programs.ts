@@ -1,24 +1,19 @@
 'use strict';
 
+import { Directive, RouteConfig } from '../shared/angular/decorators';
+
 import 'statics/programs.css!';
 
-export function Programs(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+export const NAME = 'Root.Programs';
 
-    require: '',
-    link: function(): any {},
-    controller: ProgramsCtrl,
-
-    controllerAs: 'p',
-    templateUrl: 'statics/programs.html'
-  };
-}
-
-export class ProgramsCtrl {
+@RouteConfig({
+  name: NAME,
+  url: '/programas'
+})
+@Directive(NAME, {
+  templateUrl: 'statics/programs.html'
+})
+export class ProgramsComponent {
 
   public PCTAA:any = [
     {
@@ -168,9 +163,5 @@ export class ProgramsCtrl {
       image: "/src/assets/images/programs/FEA/desde 1985.png"
     },
   ];
-
-  constructor() {
-
-  }
 
 }

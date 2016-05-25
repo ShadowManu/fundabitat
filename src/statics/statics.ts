@@ -4,13 +4,10 @@ import * as angular from 'angular';
 
 import { DirectiveLoader } from '../shared/angular/loader';
 
-// Load Directives
-
-import {Programs} from './programs';
-
 import { AboutComponent } from './about/about';
 import { AreasComponent } from './areas'
 import { LandingComponent } from './landing/landing';
+import { ProgramsComponent } from './programs';
 import { RelationsComponent } from './about/relations';
 import { RootComponent } from './root/root';
 import { TeamComponent } from './about/team';
@@ -29,30 +26,14 @@ DirectiveLoader(module, [
   AboutComponent,
   AreasComponent,
   LandingComponent,
+  ProgramsComponent,
   RelationsComponent,
   RootComponent,
   TeamComponent
 ]);
 
-// Routes
-module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: any, $urlRouterProvider: any): any {
-
-  // Home is default view
+// Default location configuration
+module.config(['$urlRouterProvider', function($urlRouterProvider: any): void {
   $urlRouterProvider.otherwise('/landing');
-
-  $stateProvider
-
-  .state('Root.Programs', {
-    url: '/programas',
-    template: '<programs></programs>'
-  })
-  ;
-
 }]);
-
-
-// Directives
-
-module
-.directive('programs', Programs);
 
