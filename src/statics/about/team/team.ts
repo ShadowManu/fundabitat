@@ -1,8 +1,8 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../shared/angular/decorators';
+import { Directive, RouteConfig } from '../../../shared/angular/decorators';
 
-import 'statics/about/team.css!';
+import './team.css!';
 
 export const NAME = "Root.Team";
 
@@ -12,7 +12,7 @@ export const NAME = "Root.Team";
   template: '<about-team></about-team>'
 })
 @Directive('aboutTeam', {
-  templateUrl: 'statics/about/team.html'
+  templateUrl: 'statics/about/team/team.html'
 })
 export class TeamComponent {
 

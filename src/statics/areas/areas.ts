@@ -1,14 +1,14 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../shared/angular/decorators';
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
 
-import 'statics/areas.css!';
+import './areas.css!';
 
 export const NAME = 'Root.Areas';
 
 @RouteConfig(NAME)
 @Directive(NAME, {
-  templateUrl: 'statics/areas.html'
+  templateUrl: 'statics/areas/areas.html'
 })
 export class AreasComponent {
 
