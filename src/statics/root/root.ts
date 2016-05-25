@@ -1,24 +1,17 @@
 'use strict';
 
-import './root.css!'
+import { Directive, RouteConfig } from "../../shared/angular/decorators";
 
-export function Root(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+import './root.css!';
 
-    require: '',
-    link: function(): any {},
-    controller: RootCtrl,
+export const NAME = 'Root';
 
-    controllerAs: 'n',
-    templateUrl: 'statics/root/root.html'
-  };
-}
-
-export class RootCtrl {
-  public static $inject: string[] = [];
-  constructor() { }
-}
+@RouteConfig({
+  name: NAME,
+  url: '',
+  abstract: true
+})
+@Directive(NAME, {
+  templateUrl: 'statics/root/root.html'
+})
+export class RootComponent { }
