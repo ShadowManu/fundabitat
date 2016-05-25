@@ -2,17 +2,18 @@
 
 import * as angular from 'angular';
 
-import {Root} from './root/root';
+import { DirectiveLoader } from '../shared/angular/loader';
 
-import {Home} from './home';
-
+// Load Directives
 import {About} from './about/about';
+
 import {Relations} from './about/relations';
 import {Team} from './about/team';
-
 import {Areas} from './areas';
-
 import {Programs} from './programs';
+
+import { RootComponent } from './root/root';
+import { LandingComponent } from './landing/landing';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -20,66 +21,59 @@ export const DEPS: string[] = [
   'ui.router'
 ];
 
+
 // Register Module
-angular.module(NAME, DEPS)
+export let module = angular.module(NAME, DEPS);
+
+// Load Components
+DirectiveLoader(module, [
+  RootComponent,
+  LandingComponent
+]);
 
 // Routes
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: any, $urlRouterProvider: any): any {
+module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: any, $urlRouterProvider: any): any {
 
   // Home is default view
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/landing');
 
   $stateProvider
-  
-  .state('root', {
-    url: '/',
-    template: '<root></root>'
-  })
 
-  .state('landing', {
-    url: 'landing',
-    template: '<home></home>'
-  })
-
-  .state('root.about', {
-    url: 'nosotros',
+  .state('Root.About', {
+    url: '/nosotros',
     template: '<about></about>'
   })
 
-  .state('root.relations', {
-    url: 'nosotros/relaciones',
+  .state('Root.Relations', {
+    url: '/nosotros/relaciones',
     template: "<about-relations></about-relations>"
   })
 
-  .state('root.team', {
-    url: 'nosotros/equipo',
+  .state('Root.Team', {
+    url: '/nosotros/equipo',
     template: "<about-team></about-team>"
-  })  
+  })
 
-  .state('root.areas', {
-    url: 'areas',
+  .state('Root.Areas', {
+    url: '/areas',
     template: '<areas></areas>'
   })
 
-    .state('root.programs', {
-      url: 'programas',
-      template: '<programs></programs>'
-    })
-
+  .state('Root.Programs', {
+    url: '/programas',
+    template: '<programs></programs>'
+  })
   ;
 
-}])
+}]);
+
 
 // Directives
-  
-.directive('root', Root)
-.directive('home', Home)
 
+module
 .directive('about', About)
 .directive('aboutRelations', Relations)
 .directive('aboutTeam', Team)
-
 .directive('areas', Areas)
-
 .directive('programs', Programs);
 
