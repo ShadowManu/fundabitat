@@ -6,7 +6,6 @@ import { DirectiveLoader } from '../shared/angular/loader';
 
 // Load Directives
 
-import {Team} from './about/team';
 import {Areas} from './areas';
 import {Programs} from './programs';
 
@@ -14,6 +13,7 @@ import { AboutComponent } from './about/about';
 import { LandingComponent } from './landing/landing';
 import { RelationsComponent } from './about/relations';
 import { RootComponent } from './root/root';
+import { TeamComponent } from './about/team';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -30,7 +30,8 @@ DirectiveLoader(module, [
   AboutComponent,
   LandingComponent,
   RelationsComponent,
-  RootComponent
+  RootComponent,
+  TeamComponent
 ]);
 
 // Routes
@@ -40,11 +41,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
   $urlRouterProvider.otherwise('/landing');
 
   $stateProvider
-
-  .state('Root.Team', {
-    url: '/nosotros/equipo',
-    template: "<about-team></about-team>"
-  })
 
   .state('Root.Areas', {
     url: '/areas',
@@ -63,7 +59,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
 // Directives
 
 module
-.directive('aboutTeam', Team)
 .directive('areas', Areas)
 .directive('programs', Programs);
 
