@@ -1,25 +1,20 @@
 'use strict';
 
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
+
 import 'statics/about/relations.css!';
 
-export function Relations():any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+export const NAME = 'Root.Relations';
 
-    require: '',
-    link: function ():any {
-    },
-    controller: RelationsCtrl,
-
-    controllerAs: 'r',
-    templateUrl: 'statics/about/relations.html'
-  };
-}
-
-export class RelationsCtrl {
+@RouteConfig({
+  name: NAME,
+  url: '/nosotros/relaciones',
+  template: '<about-relations></about-relations>'
+})
+@Directive('aboutRelations', {
+  templateUrl: 'statics/about/relations.html'
+})
+export class RelationsComponent {
 
   public nationals: any = [
     { name: 'UCV', link: 'http://www.ucv.ve/', image: "/src/assets/images/relations/UCV.png" },

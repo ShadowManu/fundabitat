@@ -6,13 +6,13 @@ import { DirectiveLoader } from '../shared/angular/loader';
 
 // Load Directives
 
-import {Relations} from './about/relations';
 import {Team} from './about/team';
 import {Areas} from './areas';
 import {Programs} from './programs';
 
 import { AboutComponent } from './about/about';
 import { LandingComponent } from './landing/landing';
+import { RelationsComponent } from './about/relations';
 import { RootComponent } from './root/root';
 
 export const NAME: string = 'fd.statics';
@@ -29,6 +29,7 @@ export let module = angular.module(NAME, DEPS);
 DirectiveLoader(module, [
   AboutComponent,
   LandingComponent,
+  RelationsComponent,
   RootComponent
 ]);
 
@@ -39,11 +40,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
   $urlRouterProvider.otherwise('/landing');
 
   $stateProvider
-
-  .state('Root.Relations', {
-    url: '/nosotros/relaciones',
-    template: "<about-relations></about-relations>"
-  })
 
   .state('Root.Team', {
     url: '/nosotros/equipo',
@@ -67,7 +63,6 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: 
 // Directives
 
 module
-.directive('aboutRelations', Relations)
 .directive('aboutTeam', Team)
 .directive('areas', Areas)
 .directive('programs', Programs);
