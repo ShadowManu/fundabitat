@@ -33,7 +33,7 @@ export function Directive(name: string, obj: IDirectiveObj): Function {
 
     // Setup directive
     let Directive: IDirective = <IDirective> function() { return dirOpts };
-    Directive.dirName = cc.camel(name);
+    Directive.dirName = cc.camel(name.split('.').pop());
     
     return Directive;
   }
@@ -56,9 +56,10 @@ export function RouteConfig(data: any): Function {
   return function(Directive: IDirective): void {
 
     Directive.route = ['$stateProvider', function($stateProvider) {
-      let paramName = cc.param(config.name);
+      let parts = config.name.split('.');
+      let paramName = cc.param(parts[parts.length-1]);
 
-      let name = cc.pascal(config.name);
+      let name = parts.map(cc.pascal).join('.');
       let url = (config.url != undefined) ? config.url : `/${paramName}`;
       let template = config.template || `<${paramName}></${paramName}>`;
       let abstract = config.abstract || false;
