@@ -8,6 +8,7 @@ import { AboutComponent } from './about/main/about';
 import { AreasComponent } from './areas/areas'
 import { HomeComponent } from './home/home';
 import { ProgramsComponent } from './programs/programs';
+import { PublicationsComponent } from './publications/publications';
 import { RelationsComponent } from './about/relations/relations';
 import { RootComponent } from './root/root';
 import { TeamComponent } from './about/team/team';
@@ -27,6 +28,7 @@ DirectiveLoader(module, [
   AreasComponent,
   HomeComponent,
   ProgramsComponent,
+  PublicationsComponent,
   RelationsComponent,
   RootComponent,
   TeamComponent
