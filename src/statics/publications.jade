@@ -11,11 +11,11 @@ div.publications
     |Incluye como parte integral de sus actividades, la producción de documentos impresos y audiovisuales relacionados
     |con sus temas de investigación.
 
-  ul
-    div(layout="row" ng-repeat="n in pu.publications")
-      div.text
-        img(ng-src="{{n.image}}")
-        h2 {{n.title}}
-        h3 {{n.author}}
-        p(ng-repeat="d in n.description") {{d}}
-        hr
+  div(layout="column" ng-repeat="n in pu.publications")
+    div.text
+      img(ng-src="{{n.image}}")
+      h2 {{n.title}}
+      h3 {{n.author}}
+      p(ng-repeat="d in n.description") {{d}}
+
+    md-divider.md-accent
