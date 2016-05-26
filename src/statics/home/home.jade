@@ -1,13 +1,24 @@
 doctype html
-div(layout="column" layout-align="center center" layout-padding layout-fill md-colors="{background: 'primary-700'}")
-  a(ui-sref="Root.About")
-    h1 FUNDABITAT
+div.content(layout="column" layout-align="center center" layout-padding layout-fill md-colors="{background: 'primary-700'}")
 
-  p.
+  img(src="/assets/images/logo-fundabitat.png")
+
+  p.description.
     Fundabitat es una organización privada sin fines de lucro constituida para realizar investigaciones aplicadas
     relativas al hóbitat y su mejor apropiación
 
   md-button.md-accent.md-raised(ui-sref="Root.About") CONOCE MAS SOBRE NOSOTROS
 
   md-divider.md-accent
+
+  p.note Ademós, Fundabitat crea y coordina:
+
+  div.extra(layout="row")
+    a(layout="column" layout-align="start center" href="http://www.anar.org.ve")
+      img(src="/assets/images/logo-anar.png")
+      span.link www.anar.org.ve
+
+    a(layout="column" layout-align="start center" href="http://www.retam.org")
+      img(src="/assets/images/logo-retam.png")
+      span www.retam.org
 

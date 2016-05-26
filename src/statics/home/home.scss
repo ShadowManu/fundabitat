@@ -1,4 +1,6 @@
 home {
+  .content { padding: 0 10%; }
+
   a {
     text-decoration: none;
     color: white;
@@ -9,12 +11,25 @@ home {
     margin: 0;
   }
 
-  p {
+  p.description {
+    margin-bottom: 10px;
+    font-size: 14pt;
     text-align: center;
   }
 
   md-divider {
     width: 100%;
     margin-top: 35px;
+  }
+
+  .note { font-style: italic; }
+
+  .extra {
+    a {
+      margin: 30px;
+
+      img { width: 300px; }
+      span { margin-top: 10px; }
+    }
   }
 }
