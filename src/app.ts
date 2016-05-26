@@ -12,9 +12,6 @@ import 'app.css!';
 import 'angular-material';
 import 'angular-ui-router';
 
-// Configs
-import './app-routes'
-
 // Application Modules
 import 'statics/statics';
 import 'shared/shared';
@@ -22,7 +19,6 @@ import 'shared/shared';
 export const NAME = 'fd';
 export const DEPS = [
   'ngMaterial',
-  'fd.routes',
   'fd.statics',
   'fd.shared'
 ];

@@ -2,17 +2,16 @@
 
 import * as angular from 'angular';
 
-import {Root} from './root/root';
+import { DirectiveLoader } from '../shared/angular/loader';
 
-import {Home} from './home';
-
-import {About} from './about/about';
-import {Relations} from './about/relations';
-import {Team} from './about/team';
-
-import {Areas} from './areas';
-
-import {Programs} from './programs';
+import { AboutComponent } from './about/main/about';
+import { AreasComponent } from './areas/areas'
+import { HomeComponent } from './home/home';
+import { ProgramsComponent } from './programs/programs';
+import { PublicationsComponent } from './publications/publications';
+import { RelationsComponent } from './about/relations/relations';
+import { RootComponent } from './root/root';
+import { TeamComponent } from './about/team/team';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -21,65 +20,22 @@ export const DEPS: string[] = [
 ];
 
 // Register Module
-angular.module(NAME, DEPS)
+export let module = angular.module(NAME, DEPS);
 
-// Routes
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider: any, $urlRouterProvider: any): any {
+// Load Components
+DirectiveLoader(module, [
+  AboutComponent,
+  AreasComponent,
+  HomeComponent,
+  ProgramsComponent,
+  PublicationsComponent,
+  RelationsComponent,
+  RootComponent,
+  TeamComponent
+]);
 
-  // Home is default view
-  $urlRouterProvider.otherwise('/');
-
-  $stateProvider
-  
-  .state('root', {
-    url: '/',
-    template: '<root></root>'
-  })
-
-  .state('landing', {
-    url: 'landing',
-    template: '<home></home>'
-  })
-
-  .state('root.about', {
-    url: 'nosotros',
-    template: '<about></about>'
-  })
-
-  .state('root.relations', {
-    url: 'nosotros/relaciones',
-    template: "<about-relations></about-relations>"
-  })
-
-  .state('root.team', {
-    url: 'nosotros/equipo',
-    template: "<about-team></about-team>"
-  })  
-
-  .state('root.areas', {
-    url: 'areas',
-    template: '<areas></areas>'
-  })
-
-    .state('root.programs', {
-      url: 'programas',
-      template: '<programs></programs>'
-    })
-
-  ;
-
-}])
-
-// Directives
-  
-.directive('root', Root)
-.directive('home', Home)
-
-.directive('about', About)
-.directive('aboutRelations', Relations)
-.directive('aboutTeam', Team)
-
-.directive('areas', Areas)
-
-.directive('programs', Programs);
+// Default location configuration
+module.config(['$urlRouterProvider', function($urlRouterProvider: any): void {
+  $urlRouterProvider.otherwise('/inicio');
+}]);
 

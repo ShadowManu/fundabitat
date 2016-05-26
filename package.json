@@ -1,12 +1,16 @@
 {
   "name": "fundabitat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Homepage of the Fundabitat Project",
   "main": "server.js",
   "scripts": {
-    "postinstall": "jspm install && typings install && gulp",
+    "postinstall": "jspm install && typings install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+
+    "tsc": "tsc",
+    "watch": "gulp watch",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -47,7 +51,9 @@
       "angular": "github:angular/bower-angular@^1.5.5",
       "angular-material": "github:angular/bower-material@1.1.0-rc4",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
-      "css": "github:systemjs/plugin-css@^0.1.21"
+      "change-case": "npm:change-case@^2.3.1",
+      "css": "github:systemjs/plugin-css@^0.1.21",
+      "lodash": "npm:lodash@^4.12.0"
     }
   }
 }

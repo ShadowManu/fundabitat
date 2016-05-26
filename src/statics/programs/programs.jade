@@ -16,12 +16,12 @@ div.programs
     |y cultural.
 
   ul.PCTAA
-    div(layout="row" ng-repeat="n in p.PCTAA")
-      div.text
+    div(layout="column" ng-repeat="n in $ctrl.PCTAA")
+      div.text(layout="row" layout-align="start center")
+        span.year(flex="10") {{n.year}}
+        span.name(flex="50") {{n.name}}
+          span.others {{n.others}}
         img(ng-src="{{n.image}}")
-        span.year {{n.year}}
-        span.name {{n.name}}
-        span.others {{n.others}}
 
   h2 Agentes de Salud
 
@@ -31,12 +31,12 @@ div.programs
     |programas en ésta área.
 
   ul.AS
-    div(layout="row" ng-repeat="n in p.AS")
-      div.text
+    div(layout="column" ng-repeat="n in $ctrl.AS")
+      div.text(layout="row" layout-align="start center")
+        span.year(flex="10") {{n.year}}
+        span.name(flex="50") {{n.name}}
+          span.others {{n.others}}
         img(ng-src="{{n.image}}")
-        span.year {{n.year}}
-        span.name {{n.name}}
-        span.others {{n.others}}
 
   h2 Facilitadores en Escuela Activa
 
@@ -44,9 +44,9 @@ div.programs
     | Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.
 
   ul.FEA
-    div(layout="row" ng-repeat="n in p.FEA")
-      div.text
+    div(layout="column" ng-repeat="n in $ctrl.FEA")
+      div.text(layout="row" layout-align="start center")
+        span.year(flex="10") {{n.year}}
+        span.name(flex="50") {{n.name}}
+          span.others {{n.others}}
         img(ng-src="{{n.image}}")
-        span.year {{n.year}}
-        span.name {{n.name}}
-        span.others {{n.others}}

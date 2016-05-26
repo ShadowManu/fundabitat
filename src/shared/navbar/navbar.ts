@@ -35,20 +35,24 @@ export class NavbarCtrl {
     this.links = [
       {
         name: 'Quienes Somos',
-        state: 'root.about',
+        state: 'Root.About',
         childs: [
-          { name: 'Nuestro equipo', state: 'root.team' },
-          { name: 'Relaciones', state: 'root.relations' },
+          { name: 'Nuestro equipo', state: 'Root.Team' },
+          { name: 'Relaciones', state: 'Root.Relations' },
         ]
       },
       {
         name: 'Áreas Temáticas',
-        state: 'root.areas'
+        state: 'Root.Areas'
       },
       {
         name: 'Programas',
-        state: 'root.programs'
+        state: 'Root.Programs'
       },
+      {
+        name: 'Publicaciones',
+        state: 'Root.Publications'
+      }
     ]
 
   }

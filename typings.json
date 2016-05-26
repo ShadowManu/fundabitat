@@ -1,9 +1,12 @@
 {
   "name": "fundabitat",
   "version": false,
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+  },
   "ambientDependencies": {
     "angular": "registry:dt/angular#1.5.0+20160328125810",
+    "change-case": "github:DefinitelyTyped/DefinitelyTyped/change-case/change-case.d.ts#56295f5058cac7ae458540423c50ac2dcf9fc711",
     "jquery": "registry:dt/jquery#1.10.0+20160316155526"
   }
 }

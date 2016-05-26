@@ -1,24 +1,20 @@
 'use strict';
 
-import 'statics/about/team.css!';
+import { Directive, RouteConfig } from '../../../shared/angular/decorators';
 
-export function Team():any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+import './team.css!';
 
-    require: '',
-    link: function(): any {},
-    controller: TeamCtrl,
+export const NAME = "Root.Team";
 
-    controllerAs: 't',
-    templateUrl: 'statics/about/team.html'
-  };
-}
-
-export class TeamCtrl {
+@RouteConfig({
+  name: NAME,
+  url: '/nosotros/equipo',
+  template: '<about-team></about-team>'
+})
+@Directive('aboutTeam', {
+  templateUrl: 'statics/about/team/team.html'
+})
+export class TeamComponent {
 
   public members:any = [
     {
