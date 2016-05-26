@@ -1,24 +1,19 @@
 'use strict';
 
-import 'statics/programs.css!';
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
 
-export function Programs(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+import './programs.css!';
 
-    require: '',
-    link: function(): any {},
-    controller: ProgramsCtrl,
+export const NAME = 'Root.Programs';
 
-    controllerAs: 'p',
-    templateUrl: 'statics/programs.html'
-  };
-}
-
-export class ProgramsCtrl {
+@RouteConfig({
+  name: NAME,
+  url: '/programas'
+})
+@Directive(NAME, {
+  templateUrl: 'statics/programs/programs.html'
+})
+export class ProgramsComponent {
 
   public PCTAA:any = [
     {
@@ -116,7 +111,7 @@ export class ProgramsCtrl {
       year: "Desde 2011",
       name: "Creación y puesta en marcha del SISTEMA ANAR.",
       others: "Aplicaciones de:",
-      image: "/src/assets/images/programs/FEA/desde 2011.png"
+      image: ""
     },
     {
       year: "",
@@ -128,7 +123,7 @@ export class ProgramsCtrl {
       year: "",
       name: "• Base de Datos Geoespacial sobre las Manifestaciones Rupestres venezolanas.",
       others: "INGEOLAN, Ingeniería de Computación USB",
-      image: ""
+      image: "/src/assets/images/programs/FEA/desde 2011 - BD.png"
     },
     {
       year: "",
@@ -168,9 +163,5 @@ export class ProgramsCtrl {
       image: "/src/assets/images/programs/FEA/desde 1985.png"
     },
   ];
-
-  constructor() {
-
-  }
 
 }

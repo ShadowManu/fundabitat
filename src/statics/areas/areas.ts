@@ -1,24 +1,16 @@
 'use strict';
 
-import 'statics/areas.css!';
+import { Directive, RouteConfig } from '../../shared/angular/decorators';
 
-export function Areas(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+import './areas.css!';
 
-    require: '',
-    link: function(): any {},
-    controller: AreasCtrl,
+export const NAME = 'Root.Areas';
 
-    controllerAs: 'a',
-    templateUrl: 'statics/areas.html'
-  };
-}
-
-export class AreasCtrl {
+@RouteConfig(NAME)
+@Directive(NAME, {
+  templateUrl: 'statics/areas/areas.html'
+})
+export class AreasComponent {
 
   public areas:any = [
     {

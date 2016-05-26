@@ -1,0 +1,17 @@
+doctype html
+
+div.team
+  h1 Nuestro Equipo
+
+  div(layout="row" layout-padding layout-align="center" layout-wrap)
+    div(layout="row" flex="33" ng-repeat="n in $ctrl.members")
+      md-card
+        img.md-card-image(ng-src="{{n.photo}}" alt="{{n.name}}")
+        md-card-title(layout="row" ayout-align="start center")
+          md-card-title-text
+            span(class="md-headline")
+              span {{n.name}}
+        md-card-content(layout="row" ayout-align="start center")
+          span {{n.description}}
+
+
