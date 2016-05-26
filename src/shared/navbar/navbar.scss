@@ -4,8 +4,10 @@ navbar {
 
     img { width: 90%; }
 
+    .header {
+      cursor: pointer;
+    }
     .header, .links {
-      //padding-top: 10px;
       padding-bottom: 10px;
     }
 
