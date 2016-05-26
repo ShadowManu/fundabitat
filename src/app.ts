@@ -19,7 +19,6 @@ import 'shared/shared';
 export const NAME = 'fd';
 export const DEPS = [
   'ngMaterial',
-  'fd.routes',
   'fd.statics',
   'fd.shared'
 ];
