@@ -11,7 +11,7 @@ div.publications
     |Incluye como parte integral de sus actividades, la producción de documentos impresos y audiovisuales relacionados
     |con sus temas de investigación.
 
-  div(layout="column" ng-repeat="n in pu.publications")
+  div(layout="column" ng-repeat="n in $ctrl.publications")
     div.text
       img(ng-src="{{n.image}}")
       h2 {{n.title}}

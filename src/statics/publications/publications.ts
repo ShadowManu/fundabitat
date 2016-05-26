@@ -1,24 +1,19 @@
 'use strict';
 
-import 'statics/publications.css!';
+import { Directive, RouteConfig } from '../../shared/angular/decorators'
 
-export function Publications(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
+import './publications.css!';
 
-    require: '',
-    link: function(): any {},
-    controller: PublicationsCtrl,
+export const NAME = 'Root.Publications';
 
-    controllerAs: 'pu',
-    templateUrl: 'statics/publications.html'
-  };
-}
-
-export class PublicationsCtrl {
+@RouteConfig({
+  name: NAME,
+  url: '/publicaciones'
+})
+@Directive(NAME, {
+  templateUrl: 'statics/publications/publications.html'
+})
+export class PublicationsComponent {
 
   public publications:any = [
     {

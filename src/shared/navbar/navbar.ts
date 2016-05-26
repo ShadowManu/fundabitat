@@ -49,6 +49,10 @@ export class NavbarCtrl {
         name: 'Programas',
         state: 'Root.Programs'
       },
+      {
+        name: 'Publicaciones',
+        state: 'Root.Publications'
+      }
     ]
 
   }
