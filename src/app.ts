@@ -12,9 +12,6 @@ import 'app.css!';
 import 'angular-material';
 import 'angular-ui-router';
 
-// Configs
-import './app-routes'
-
 // Application Modules
 import 'statics/statics';
 import 'shared/shared';
