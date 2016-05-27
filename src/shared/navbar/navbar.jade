@@ -15,6 +15,7 @@ md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whitefram
       a.md-button.md-raised.md-cornered.child(
       ng-repeat="child in link.childs"
       ui-state="child.state" ui-sref-active="md-accent")
+        md-icon chevron_right
         | {{child.name}}
 
       md-divider(md-colors="{background: 'grey-800'}")
