@@ -6,7 +6,7 @@ md-component-id="left" md-is-locked-open="true" md-disable-backdrop md-whitefram
     img(src="assets/images/logo-fundabitat.png")
 
   md-content.links(flex md-colors="{background: 'grey-900'}")
-    div(layout="column" ng-repeat="link in n.links")
+    div(layout="column" ng-repeat="link in $ctrl.links")
 
       a.md-button.md-raised.md-cornered(
       ui-state="link.state" ui-sref-active="md-accent")

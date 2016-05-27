@@ -1,6 +1,10 @@
 'use strict';
 
-import './navbar.css!'
+import { Directive } from '../angular/decorators';
+
+import './navbar.css!';
+
+export const NAME = "Navbar";
 
 interface Link {
   name: string;
@@ -8,23 +12,10 @@ interface Link {
   childs?: Link[];
 }
 
-export function Navbar(): any {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {},
-    bindToController: {},
-
-    require: '',
-    link: function(): any {},
-    controller: NavbarCtrl,
-
-    controllerAs: 'n',
-    templateUrl: 'shared/navbar/navbar.html'
-  };
-}
-
-export class NavbarCtrl {
+@Directive(NAME, {
+  templateUrl: 'shared/navbar/navbar.html'
+})
+export class NavbarComponent {
 
   links: Link[];
 
@@ -34,27 +25,15 @@ export class NavbarCtrl {
 
     this.links = [
       {
-        name: 'Quienes Somos',
-        state: 'Root.About',
+        name: 'Quienes Somos', state: 'Root.About',
         childs: [
           { name: 'Nuestro equipo', state: 'Root.Team' },
           { name: 'Relaciones', state: 'Root.Relations' },
         ]
       },
-      {
-        name: 'Áreas Temáticas',
-        state: 'Root.Areas'
-      },
-      {
-        name: 'Programas',
-        state: 'Root.Programs'
-      },
-      {
-        name: 'Publicaciones',
-        state: 'Root.Publications'
-      }
-    ]
-
+      { name: 'Áreas Temáticas', state: 'Root.Areas' },
+      { name: 'Programas', state: 'Root.Programs' },
+      { name: 'Publicaciones', state: 'Root.Publications' }
+    ];
   }
-
 }
