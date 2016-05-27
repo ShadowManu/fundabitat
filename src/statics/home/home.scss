@@ -1,5 +1,8 @@
 home {
-  .content { padding: 0 10%; }
+  .content {
+    min-height: 100%;
+    padding: 0 10%;
+  }
 
   a {
     text-decoration: none;
@@ -12,6 +15,7 @@ home {
   }
 
   p.description {
+    padding: 8px 10%;
     margin-bottom: 10px;
     font-size: 14pt;
     text-align: center;
