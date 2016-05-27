@@ -2,7 +2,9 @@
 
 import * as angular from 'angular';
 
-import {Navbar} from './navbar/navbar';
+import { DirectiveLoader } from './angular/loader';
+
+import { NavbarComponent } from './navbar/navbar';
 
 export const NAME: string = 'fd.shared';
 export const DEPS: string[] = [
@@ -11,7 +13,9 @@ export const DEPS: string[] = [
 ];
 
 // Register Module
-angular.module(NAME, DEPS)
+export let module = angular.module(NAME, DEPS);
 
-// Directives
-.directive('navbar', Navbar);
+// Load Components
+DirectiveLoader(module, [
+  NavbarComponent
+]);
