@@ -14,6 +14,7 @@ System.config({
     "change-case": "npm:change-case@2.3.1",
     "css": "github:systemjs/plugin-css@0.1.21",
     "lodash": "npm:lodash@4.12.0",
+    "rx": "npm:rx@4.1.0",
     "github:angular-ui/ui-router@0.2.18": {
       "angular": "github:angular/bower-angular@1.5.5"
     },
@@ -34,7 +35,7 @@ System.config({
       "css": "github:systemjs/plugin-css@0.1.21"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
-      "assert": "npm:assert@1.3.0"
+      "assert": "npm:assert@1.4.1"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.6.0"
@@ -45,7 +46,10 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:assert@1.3.0": {
+    "npm:assert@1.4.1": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
     },
     "npm:buffer@3.6.0": {
@@ -113,6 +117,9 @@ System.config({
     },
     "npm:process@0.11.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:rx@4.1.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:sentence-case@1.1.3": {
       "lower-case": "npm:lower-case@1.1.3"
