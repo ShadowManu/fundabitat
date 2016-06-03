@@ -3,7 +3,7 @@
 import * as lo from 'lodash';
 import * as cc from 'change-case';
 
-import { IDirectiveObj, IDirective, IRouteConfigObj } from 'angular-extras';
+import { IDirectiveObj, IDirective, IRouteConfigObj, IService } from 'angular-extras';
 
 /**
  * Directive decorator factory to create simple Angular Directives
@@ -68,4 +68,19 @@ export function RouteConfig(data: any): Function {
     }];
   }
 
+}
+
+/**
+ * Service decorator to simply append service name
+ * to be used by the loader
+ * @param name
+ * @returns {function(IService): void}
+ * @constructor
+ */
+export function Service(name: string): Function {
+  
+  // Actual Decorator
+  return function(Serv: IService): void {
+    Serv.serviceName = name;
+  }
 }
