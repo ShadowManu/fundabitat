@@ -1,7 +1,7 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../../shared/angular/decorators';
-
+import { Directive, Inject, RouteConfig } from '../../../shared/angular/decorators';
+import { HeaderService } from "../../header/header";
 import './team.css!';
 
 export const NAME = "Root.Team";
@@ -14,8 +14,13 @@ export const NAME = "Root.Team";
 @Directive('aboutTeam', {
   templateUrl: 'statics/about/team/team.html'
 })
+@Inject(['HeaderService'])
 export class TeamComponent {
 
+  constructor(private Header: HeaderService) {
+    this.Header.setTitle('Nuestro Equipo');
+  }
+  
   public members:any = [
     {
       name: 'Ruby De Valencia',

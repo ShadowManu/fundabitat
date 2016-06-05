@@ -1,11 +1,17 @@
+@import '../../../shared/_colors.scss';
+
 about-team {
 
-  div.team {
-    padding: 20px 100px 20px 30px;
+  md-card {
+    width: 250px;
+
+    .img-cont {
+      height: 250px;
+
+      img { object-fit: cover; }
+    }
+
+    span.name { font-size: 16pt; }
+    span.description { font-size: 11pt; }
   }
-
-  //img.md-card-image{
-  //  height: 300px;
-  //}
-
 }

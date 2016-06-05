@@ -1,17 +1,21 @@
 doctype html
+div.standard-page
 
-div.team
-  h1 Nuestro Equipo
+  p.
+    FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del
+    país y del exterior.
 
-  div(layout="row" layout-padding layout-align="center" layout-wrap)
-    div(layout="row" flex="33" ng-repeat="n in $ctrl.members")
+  md-divider
+
+  div(layout="row" layout-wrap layout-padding)
+    div.section(layout="row" layout-align="center stretch" flex-xs="100" flex-sm="50" flex-gt-sm="33" layout-wrap
+    ng-repeat="mem in $ctrl.members")
+
       md-card
-        img.md-card-image(ng-src="{{n.photo}}" alt="{{n.name}}")
-        md-card-title(layout="row" ayout-align="start center")
-          md-card-title-text
-            span(class="md-headline")
-              span {{n.name}}
-        md-card-content(layout="row" ayout-align="start center")
-          span {{n.description}}
+        div.img-cont
+          img.md-card-image(layout-fill ng-src="{{mem.photo}}" alt="{{n.name}}")
 
-
+        div(layout="column" layout-padding)
+          span.name {{mem.name}}
+          md-divider
+          span.description {{mem.description}}
