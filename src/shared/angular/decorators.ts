@@ -71,6 +71,20 @@ export function RouteConfig(data: any): Function {
 }
 
 /**
+ * Component decorator to define the dependency names
+ * that the angular DI will load through the $inject property
+ * @param dependencies
+ * @returns {function(Function): void}
+ * @constructor
+ */
+export function Inject(dependencies: string[]) {
+  
+  // Actual Decorator
+  return function(Component: Function) {
+    Component.$inject = dependencies;
+  };
+}
+/**
  * Service decorator to simply append service name
  * to be used by the loader
  * @param name
@@ -82,5 +96,5 @@ export function Service(name: string): Function {
   // Actual Decorator
   return function(Serv: IService): void {
     Serv.serviceName = name;
-  }
+  };
 }
