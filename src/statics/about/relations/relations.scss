@@ -9,7 +9,26 @@ about-relations {
     text-align: center;
   }
 
-  img {
-    width: 150px;
+  .section {
+    //margin-bottom: 10px;
+  }
+
+  .element {
+
+    .img-cont {
+      width: 150px;
+      height: 150px;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-size: 12pt;
+    }
   }
 }

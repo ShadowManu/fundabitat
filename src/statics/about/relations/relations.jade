@@ -1,29 +1,36 @@
 doctype html
+div.standard-page
 
-div.relations
-  h1 Relaciones
+  p.
+    FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del
+    país y del exterior.
 
-  p
-    |FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y
-    |del exterior.
+  md-divider
+  h1 Nacionales
 
-  h2 Nacionales
-  ul.nationals
-    div(layout="row" layout-padding layout-wrap)
-      div(layout="column" layout-align="center center" flex="50" ng-repeat="n in $ctrl.nationals")
-        img(ng-src="{{n.image}}")
-        a(href="{{n.link}}") {{n.name}}
+  div(layout="row" layout-align="space-around start" layout-wrap)
+    div.section(layout="row" layout-align="center center" flex="33" ng-repeat="nat in $ctrl.nationals")
+      a(href="{{nat.link}}"): div.element(layout="column" layout-align="start center" layout-padding)
+        .img-cont(layout="row" layout-align="center center")
+          img(ng-src="{{nat.image}}")
+        span {{nat.name}}
 
-  h2 Internacionales
-  ul.internationals
-    div(layout="row" layout-padding layout-wrap)
-      div(layout="column" layout-align="center center" flex="50" ng-repeat="n in $ctrl.internationals")
-        img(ng-src="{{n.image}}")
-        a(href="{{n.link}}") {{n.name}}
+  md-divider
+  h1 Internacionales
 
-  h2 FUNDABITAT ha sido admitida como miembro de:
-  ul.members
-    div(layout="row" layout-padding layout-wrap)
-      div(layout="column" layout-align="center center" flex="50" ng-repeat="n in $ctrl.members")
-        img(ng-src="{{n.image}}")
-        a(href="{{n.link}}") {{n.name}}
+  div(layout="row" layout-align="space-around start" layout-wrap)
+    div.section(layout="row" layout-align="center center" flex="33" ng-repeat="nat in $ctrl.internationals")
+      a(href="{{nat.link}}"): div.element(layout="column" layout-align="start center" layout-padding)
+        .img-cont(layout="row" layout-align="center center")
+          img(ng-src="{{nat.image}}")
+        span {{nat.name}}
+
+  md-divider
+  h1 Fundabitat es miembro de:
+
+  div(layout="row" layout-align="space-around start" layout-wrap)
+    div.section(layout="row" layout-align="center center" flex="33" ng-repeat="nat in $ctrl.members")
+      a(href="{{nat.link}}"): div.element(layout="column" layout-align="start center" layout-padding)
+        .img-cont(layout="row" layout-align="center center")
+          img(ng-src="{{nat.image}}")
+        span {{nat.name}}

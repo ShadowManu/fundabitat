@@ -1,7 +1,7 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../../shared/angular/decorators';
-
+import { Directive, Inject,RouteConfig } from '../../../shared/angular/decorators';
+import { HeaderService } from "../../header/header";
 import './relations.css!';
 
 export const NAME = 'Root.Relations';
@@ -14,7 +14,12 @@ export const NAME = 'Root.Relations';
 @Directive('aboutRelations', {
   templateUrl: 'statics/about/relations/relations.html'
 })
+@Inject(['HeaderService'])
 export class RelationsComponent {
+  
+  constructor(private Header: HeaderService) {
+    this.Header.setTitle('Relaciones');
+  }
 
   public nationals: any = [
     { name: 'UCV', link: 'http://www.ucv.ve/', image: "/src/assets/images/relations/UCV.png" },

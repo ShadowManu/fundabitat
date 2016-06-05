@@ -13,13 +13,21 @@
 
   h1, h2 { color: $primary-600; }
 
+  a {
+    color: $accent-500;
+    text-decoration: none !important;
+  }
+
   p, li {
     font-size: 17px;
     line-height: 1.8em;
   }
 
   md-divider {
-    margin: 30px;
     border-color: $primary-600;
+  }
+
+  & > md-divider {
+    margin: 30px;
   }
 }
