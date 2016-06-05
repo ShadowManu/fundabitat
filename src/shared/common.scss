@@ -1,0 +1,25 @@
+@import '_colors';
+
+.standard-page {
+
+  padding-top: 30px;
+  max-width: 850px;
+
+  & > * {
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style-position: inside;
+  }
+
+  h1, h2 { color: $primary-600; }
+
+  p, li {
+    font-size: 17px;
+    line-height: 1.8em;
+  }
+
+  md-divider {
+    margin: 30px;
+    border-color: $primary-600;
+  }
+}

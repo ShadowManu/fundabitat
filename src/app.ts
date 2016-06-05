@@ -6,6 +6,7 @@ import config from './app-config';
 
 // Global Styles
 import 'angular-material/angular-material.css!';
+import 'shared/common.css!'
 import 'app.css!';
 
 // Global Libraries
