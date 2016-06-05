@@ -34,7 +34,7 @@ export class AreasComponent {
       image: "/src/assets/images/areas/Saneamiento.png"
     },
     {
-      name: "Manejo integrado de Patrimonios –natural y cultural-",
+      name: "Manejo integrado de Patrimonios",
       image: "/src/assets/images/areas/Manejo.png"
     },
     {
@@ -46,9 +46,8 @@ export class AreasComponent {
       image: "/src/assets/images/areas/implementación.png"
     },
     {
-      name: "Asistencia técnica a comunidades, ONG’s, OGs y privadas, para la identificación, preparación y evaluación" +
-      " de proyectos.", image: "/src/assets/images/areas/Asistencia.png"
+      name: "Asistencia técnica a comunidades y organizaciones",
+      image: "/src/assets/images/areas/Asistencia.png"
     }
   ]
-
 }

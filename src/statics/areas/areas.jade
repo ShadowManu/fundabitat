@@ -1,17 +1,19 @@
 doctype html
+div.standard-page
 
-div.areas
-  h1 Areas Temáticas
+  p.
+    FUNDABITAT realiza trabajos de investiagacion y asesoramiento en el ámbito regional, promoviendo el
+    intercambio de experiencas de desarrollo alternativo en:
 
-  p
-    b FUNDABITAT
-    |  realiza trabajos de investigación y asesoramiento en el ámbito regional, promoviendo el intercambio de experiencias
-    |de desarrollo alternativo en:
+  md-divider
 
-  div(layout="row" layout-padding layout-align="center" layout-wrap)
-    div(layout="row" flex="33" ng-repeat="n in $ctrl.areas")
+  div(layout="row" layout-wrap layout-padding)
+    div.section(layout="row" layout-align="center stretch" flex-xs="100" flex-gt-xs="50" layout-wrap
+    ng-repeat="area in $ctrl.areas")
+
       md-card
-        img.md-card-image(ng-src="{{n.image}}" alt="{{n.name}}")
-        md-card-content(layout="row" layout-align="center center")
-          span
-            b {{n.name}}
+        div.img-cont
+          img.md-card-image(layout-fill ng-src="{{area.image}}" alt="{{area.name}}")
+
+        div(layout="column" layout-padding)
+          span.name {{area.name}}
