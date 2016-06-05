@@ -2,7 +2,7 @@
 
 import * as angular from 'angular';
 
-import { DirectiveLoader } from '../shared/angular/loader';
+import { DirectiveLoader, ServiceLoader } from '../shared/angular/loader';
 
 import { AboutComponent } from './about/main/about';
 import { AreasComponent } from './areas/areas'
@@ -12,6 +12,7 @@ import { PublicationsComponent } from './publications/publications';
 import { RelationsComponent } from './about/relations/relations';
 import { RootComponent } from './root/root';
 import { TeamComponent } from './about/team/team';
+import { HeaderService } from "./header/header";
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -32,6 +33,11 @@ DirectiveLoader(module, [
   RelationsComponent,
   RootComponent,
   TeamComponent
+]);
+
+// Load Services
+ServiceLoader(module, [
+  HeaderService
 ]);
 
 // Default location configuration
