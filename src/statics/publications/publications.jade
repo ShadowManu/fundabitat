@@ -1,21 +1,22 @@
 doctype html
+div.standard-page(layout="column")
 
-div.publications
-  h1 Publicaciones:
+  p.
+    FUNDABITAT impulsa iniciativas que promuevan la inversión en recursos humanos, identifiquen y analicen problemas,
+    e implementen soluciones, promoviendo la participación comunitaria directa.
 
-  p
-    |FUNDABITAT impulsa iniciativas que promuevan la inversión en recursos humanos, identifiquen y analicen problemas,
-    |e implementen soluciones, promoviendo la participación comunitaria directa.
+  p.
+    incluye como parte integral de sus actividades, la producción de documentos impresos y audiovisuales relacionados
+    con sus temas de investigación.
 
-  p
-    |Incluye como parte integral de sus actividades, la producción de documentos impresos y audiovisuales relacionados
-    |con sus temas de investigación.
+  md-card(layout="row" layout-align="start stretch" ng-repeat="pub in $ctrl.publications" layout-padding)
+    div(layout="column" flex)
+      div.title(layout="column" flex)
+        h2 {{pub.title}}
+        p: small {{pub.author}}
+      md-divider
 
-  div(layout="column" ng-repeat="n in $ctrl.publications")
-    div.text
-      img(ng-src="{{n.image}}")
-      h2 {{n.title}}
-      h3 {{n.author}}
-      p(ng-repeat="d in n.description") {{d}}
+      p(ng-repeat="par in pub.description") {{par}}
 
-    md-divider.md-accent
+    div.img-cont
+      img(ng-src="{{pub.image}}")
