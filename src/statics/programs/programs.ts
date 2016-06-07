@@ -1,7 +1,7 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../shared/angular/decorators';
-
+import { Directive, Inject, RouteConfig } from '../../shared/angular/decorators';
+import { HeaderService } from "../header/header";
 import './programs.css!';
 
 export const NAME = 'Root.Programs';
@@ -13,7 +13,12 @@ export const NAME = 'Root.Programs';
 @Directive(NAME, {
   templateUrl: 'statics/programs/programs.html'
 })
+@Inject(['HeaderService'])
 export class ProgramsComponent {
+  
+  constructor(private Header: HeaderService) {
+    this.Header.setTitle('Programas y Proyectos');
+  }
 
   public PCTAA:any = [
     {

@@ -1,35 +1,12 @@
 programs {
 
-  div.programs {
-    padding: 20px 100px 20px 30px;
-  }
-
-  p {
-    text-align: left;
-  }
-
-  div.text {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  span.year {
-    margin-right: 10px;
-  }
-
-  span.name {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  span.others {
-    font-weight: normal;
-    margin-left: 10px;
-  }
-
-  img {
+  .img-cont{
     width: 300px;
-    margin: 10px;
+
+    img {
+      min-height: 220px;
+      object-fit: cover;
+    }
   }
 }
 
