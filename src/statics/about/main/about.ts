@@ -1,7 +1,7 @@
 'use strict';
 
-import { Directive, RouteConfig } from '../../../shared/angular/decorators';
-
+import { Directive, Inject, RouteConfig } from '../../../shared/angular/decorators';
+import { HeaderService } from "../../header/header";
 import './about.css!';
 
 export const NAME = 'Root.About';
@@ -13,4 +13,11 @@ export const NAME = 'Root.About';
 @Directive(NAME, {
   templateUrl: 'statics/about/main/about.html'
 })
-export class AboutComponent { }
+@Inject(['HeaderService'])
+export class AboutComponent {
+  
+  constructor(private Header: HeaderService) {
+    this.Header.setTitle('Quienes Somos');
+  }
+  
+}

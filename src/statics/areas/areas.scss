@@ -1,14 +1,14 @@
 areas {
 
-  div.areas {
-    padding: 20px 100px 20px 30px;
-  }
+  md-card {
+    width: 360px;
 
-  p {
-    text-align: left;
-  }
+    .img-cont {
+      height: 230px;
 
-  span {
-    text-align: center;
+      img { object-fit: cover; }
+    }
+
+    span.name { font-size: 14pt; }
   }
 }

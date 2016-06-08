@@ -1,52 +1,51 @@
 doctype html
+div.standard-page(layout="column")
 
-div.programs
-  h1 Programas y Proyectos:
+  p.
+    FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formación y Capacitación:
 
-  p
-    b FUNDABITAT
-    |  desarrolla los Proyectos, en el marco de sus
-    b  Programas de Formación y Capacitación:
+  md-divider
+  h1 Piloto de Construcción con Tecnologías Apropiadas y Apropiables
 
-  h2 Piloto de Construcción con Tecnologías Apropiadas y Apropiables
+  p.
+    Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra,
+    dando las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico
+    regional y cultural.
 
-  p
-    |Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra, dando
-    |las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico regional
-    |y cultural.
+  md-card(layout="row" layout-align="start stretch" ng-repeat="p in $ctrl.PCTAA" layout-padding)
+    div(layout="column" flex)
+      h2 {{p.year}}
+      md-divider
+      p {{p.name}}
+    div.img-cont(layout="column" layout-align="center")
+      img(ng-src="{{p.image}}")
 
-  ul.PCTAA
-    div(layout="column" ng-repeat="n in $ctrl.PCTAA")
-      div.text(layout="row" layout-align="start center")
-        span.year(flex="10") {{n.year}}
-        span.name(flex="50") {{n.name}}
-          span.others {{n.others}}
-        img(ng-src="{{n.image}}")
+  md-divider
+  h1 Agentes de Salud
 
-  h2 Agentes de Salud
+  p.
+    Implementa acciones destinadas a generar autosuficiencia en las comunidades, para que puedan trabajar en función
+    de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten
+    programas en ésta área.
 
-  p
-    | Implementa acciones destinadas a generar autosuficiencia en las comunidades, para que puedan trabajar en función
-    |de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten
-    |programas en ésta área.
+  md-card(layout="row" layout-align="start stretch" ng-repeat="a in $ctrl.AS" layout-padding)
+    div(layout="column" flex)
+      h2 {{a.year}}
+      md-divider
+      p {{a.name}}
+    div.img-cont(layout="column" layout-align="center")
+      img(ng-src="{{a.image}}")
 
-  ul.AS
-    div(layout="column" ng-repeat="n in $ctrl.AS")
-      div.text(layout="row" layout-align="start center")
-        span.year(flex="10") {{n.year}}
-        span.name(flex="50") {{n.name}}
-          span.others {{n.others}}
-        img(ng-src="{{n.image}}")
+  md-divider
+  h1 Facilitadores en Escuela Activa
 
-  h2 Facilitadores en Escuela Activa
+  p Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.
 
-  p
-    | Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.
-
-  ul.FEA
-    div(layout="column" ng-repeat="n in $ctrl.FEA")
-      div.text(layout="row" layout-align="start center")
-        span.year(flex="10") {{n.year}}
-        span.name(flex="50") {{n.name}}
-          span.others {{n.others}}
-        img(ng-src="{{n.image}}")
+  md-card(layout="row" layout-align="start stretch" ng-repeat="f in $ctrl.FEA" layout-padding)
+    div(layout="column" flex)
+      h2 {{f.year}}
+      md-divider
+      p {{f.name}}
+      p: small {{f.others}}
+    div.img-cont(layout="column" layout-align="center")
+      img(ng-src="{{f.image}}" ng-if="f.image")

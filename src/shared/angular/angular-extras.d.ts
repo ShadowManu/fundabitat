@@ -14,16 +14,21 @@ declare module 'angular-extras' {
     bindToController?: any;
 
     require?: string | string[];
-    link?: () => void;
+    link?: (scope: any, elem: any, attrs: any) => void;
     controller?: Function;
 
     controllerAs?: string;
-    templateUrl: string;
+    templateUrl?: string;
   }
   
   interface IDirective {
     (): IDirectiveObj;
     dirName: string;
     route: any[] | Function;
+  }
+  
+  interface IService {
+    (): any;
+    serviceName: string;
   }
 }
