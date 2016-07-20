@@ -89,7 +89,7 @@ export class ProgramsComponent {
       name: "Establecimiento de un Huerto piloto de Plantas Medicinales, Alimenticias, Frutales y Árboles de " +
       "crecimiento rápido con las mujeres Jiwi-Guahibo del corredor vial Sipapo-Puente Samariapo, estado Amazonas",
       others: "EMBAJADA DE ALEMANIA –Proyectos de pequeña envergadura.",
-      image: "/src/assets/images/programs/AS/Establecimiento-de-un-huerto-piloto.png"
+      image: "/src/assets/images/programs/AS/huerto-piloto.png"
     },
     {
       year: "1997",
@@ -99,7 +99,7 @@ export class ProgramsComponent {
       "Université de Toulouse, Département d´Epidemiologie. Francia. PROCED –Proyecto franco-ecuatoriano de " +
       "erradicación del cólera y enfermedades diarréicas (a nivel regional andino). Quito, INH –Instituto Nacional " +
       "de Higiene, Ecuador.",
-      image: "/src/assets/images/programs/AS/Cursos-teórico-prácticos.png"
+      image: "/src/assets/images/programs/AS/teorico-practicos.png"
     },
     {
       year: "1996",
@@ -107,7 +107,7 @@ export class ProgramsComponent {
       others: "Cooperación Técnica y Científica de la Embajada de Francia (a nivel regional andino). Caracas, PROCED " +
       "-Proyecto franco-ecuatoriano de erradicación del cólera y enfermedades diarréicas (a nivel regional andino)." +
       " Quito, INH –Instituto Nacional de Higiene. Ecuador.",
-      image: "/src/assets/images/programs/AS/Cursos-intensivos-de-diagnostico.png"
+      image: "/src/assets/images/programs/AS/intensivos-diagnostico.png"
     },
   ];
 
@@ -122,13 +122,13 @@ export class ProgramsComponent {
       year: "",
       name: "• Realidad Aumentada sobre las Manifestaciones Rupestres venezolanas.",
       others: "Ingeniería de Computación USB",
-      image: "/src/assets/images/programs/FEA/desde 2011-Realidad-Aumentada.png"
+      image: "/src/assets/images/programs/FEA/desde-2011-ra.png"
     },
     {
       year: "",
       name: "• Base de Datos Geoespacial sobre las Manifestaciones Rupestres venezolanas.",
       others: "INGEOLAN, Ingeniería de Computación USB",
-      image: "/src/assets/images/programs/FEA/desde 2011 - BD.png"
+      image: "/src/assets/images/programs/FEA/desde-2011-bd.png"
     },
     {
       year: "",
@@ -140,7 +140,7 @@ export class ProgramsComponent {
       year: "Desde 2008",
       name: "Proyecto Educativo: Las Manifestaciones Rupestres y la Escuela.",
       others: "Escuela de Antropología y Escuela de Educación UCV.",
-      image: "/src/assets/images/programs/FEA/desde 2008.png"
+      image: "/src/assets/images/programs/FEA/desde-2008.png"
     },
     {
       year: "1998",
@@ -165,7 +165,7 @@ export class ProgramsComponent {
       year: "Desde 1985",
       name: "Creación y actualización continua del ANAR –Archivo Nacional de Arte Rupestre.",
       others: "",
-      image: "/src/assets/images/programs/FEA/desde 1985.png"
+      image: "/src/assets/images/programs/FEA/desde-1985.png"
     },
   ];
 
