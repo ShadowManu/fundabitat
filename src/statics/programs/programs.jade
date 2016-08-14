@@ -17,6 +17,7 @@ div.standard-page(layout="column")
       h2 {{p.year}}
       md-divider
       p {{p.name}}
+      p: small {{p.others}}
     div.img-cont(layout="column" layout-align="center")
       img(ng-src="{{p.image}}")
 
@@ -33,6 +34,7 @@ div.standard-page(layout="column")
       h2 {{a.year}}
       md-divider
       p {{a.name}}
+      p: small {{a.others}}
     div.img-cont(layout="column" layout-align="center")
       img(ng-src="{{a.image}}")
 
