@@ -13,6 +13,7 @@ import { RelationsComponent } from './about/relations/relations';
 import { RootComponent } from './root/root';
 import { TeamComponent } from './about/team/team';
 import { HeaderService } from "./header/header";
+import { RetamComponent } from './retam/retam';
 
 export const NAME: string = 'fd.statics';
 export const DEPS: string[] = [
@@ -32,7 +33,8 @@ DirectiveLoader(module, [
   PublicationsComponent,
   RelationsComponent,
   RootComponent,
-  TeamComponent
+  TeamComponent,
+  RetamComponent
 ]);
 
 // Load Services
