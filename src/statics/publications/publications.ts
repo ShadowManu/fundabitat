@@ -33,7 +33,7 @@ export class PublicationsComponent {
       'Venezuela en la Exposición EL LIBRO MAS BELLO DEL MUNDO 1988; Medalla de Bronce , Exposición Internacional ' +
       'del Arte del Libro, 1989, Leipzig, Alemania; y Reconocimiento en la IX Exposición Anual del Libro Ilustrado ' +
       'y la Fotografía Documental , 1988, Instituto Autónomo Biblioteca Nacional, Caracas.'],
-      image: '/src/assets/images/publications/El-Diseño.png'
+      image: '/src/assets/images/publications/el-diseño.png'
     },
     {
       title: 'La Guaira Siempre',
@@ -44,7 +44,7 @@ export class PublicationsComponent {
       'hasta la actualidad, resaltando que lo más importante, no son los sucesos en sí mismos, sino saber, como ' +
       'siempre lo hicieron sus pobladores a lo largo de su historia, sobreponerse a ellos.',
       'Edición del CONAC -Consejo Nacional de Cultura-, 106 págs, Caracas, 2003'],
-      image: '/src/assets/images/publications/-La-Guaira-Siempre.png'
+      image: '/src/assets/images/publications/la-guaira-siempre.png'
     },
     {
       title: 'Tecnologías Apropiadas de la Amazonia en: Construcción, Saneamiento Básico Ambiental y Energías ' +
@@ -62,7 +62,7 @@ export class PublicationsComponent {
       'ecotecnologías a través de la autogestión comunitaria del medio ambiente.',
       'TCA - Tratado de Cooperación Amazónica -, FUNDABITAT, FAO, Ministerio de Cooperación Técnica del Reino de ' +
       'los Países Bajos. 160 págs, Caracas, 1999'],
-      image: '/src/assets/images/publications/Tecnologías.-Apropiadas-y-Apropiables.png'
+      image: '/src/assets/images/publications/tecnologias-a-y-a.png'
     },
     {
       title: 'CD. Base de Datos sobre Tecnologías Apropiadas de la Amazonia –Bolivia, Brasil, Colombia y Venezuela-',
@@ -74,7 +74,7 @@ export class PublicationsComponent {
       'aportando elementos a los Organismos Nacionales y Regionales que toman decisiones y elaboran los Programas ' +
       'de desarrollo local dentro del marco de las estrategias para la reducción de la pobreza en cada país amazónico.',
       'FUNDABITAT, FAO, TCA / SPT Venezuela–Tratado de Cooperación Amazónica / Secretaría Pro Tempore Venezuela. 2000'],
-      image: '/src/assets/images/publications/Base-de-Datos-de-tecnologías.png'
+      image: '/src/assets/images/publications/bd-tecnologias.png'
     },
     {
       title: 'CD. Base de Datos. Tecnologías Apropiadas de la Amazonia en: Construcción, Saneamiento básico ' +
@@ -86,7 +86,7 @@ export class PublicationsComponent {
       'Ambiental y Energías Renovables, como parte fundamental en su trabajo de configuración y puesta en marcha ' +
       'de la RETAM –Red de tecnologías Apropiadas de la Amazonia-.',
       'FUNDABITAT, OEA, FFPG, UNAMAZ, CAF. 2009'],
-      image: '/src/assets/images/publications/Base-de-DATOS-en-3-idiomas--.png'
+      image: '/src/assets/images/publications/bd-3-idiomas.png'
     },
     {
       title: 'Juego didáctico: MANIFESTACIONES RUPESTRES VENEZOLANAS',
@@ -99,7 +99,7 @@ export class PublicationsComponent {
       'Manifestaciones Rupestres, a través de este juego didáctico de divulgación científica, que propone fomentar ' +
       'el conocimiento, como vehículo para la protección de los sitios rupestres en Venezuela.',
       'FUNDABITAT, 2012'],
-      image: '/src/assets/images/publications/RUEDA-VENEZUELA-copia-1.png'
+      image: '/src/assets/images/publications/rueda-venezuela.png'
     },
     {
       title: 'Juego didáctico: VENEZUELA RUPESTRE y MUNDO RUPESTRE',
@@ -108,7 +108,7 @@ export class PublicationsComponent {
       'Venezuela Rupestre y el Mundo Rupestre, muestra su unidad, su diversidad, y la forma de comprender el mundo,' +
       ' a través de las Manifestaciones Rupestres.',
       'FUNDABITAT, 2012'],
-      image: '/src/assets/images/publications/RUEDA-MUNDO.png'
+      image: '/src/assets/images/publications/rueda-mundo.png'
     },
     {
       title: 'CD - Memoria Institucional TRATADO DE COOPERACIÓN AMAZÓNICA Publicaciones 1990-1999',
@@ -117,7 +117,7 @@ export class PublicationsComponent {
       'Amazónica (algunas de FUNDABITAT) entre 1990 y 1999, años durante los cuales la Secretaría ha sido ejercida ' +
       'por Ecuador, Perú y Venezuela. Dichas publicaciones están dirigidas a todos los estudiosos del hecho amazónico.',
       'TCA, 1999'],
-      image: '/src/assets/images/publications/Tratado-de.png'
+      image: '/src/assets/images/publications/tratado.png'
     },
   ]
 

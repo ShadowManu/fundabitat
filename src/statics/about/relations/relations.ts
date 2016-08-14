@@ -22,30 +22,30 @@ export class RelationsComponent {
   }
 
   public nationals: any = [
-    { name: 'UCV', link: 'http://www.ucv.ve/', image: "/src/assets/images/relations/UCV.png" },
+    { name: 'UCV', link: 'http://www.ucv.ve/', image: "/src/assets/images/relations/ucv.png" },
     { name: 'UJMV', link: 'http://ujmv.edu/', image: "/src/assets/images/relations/ujmv.jpg" },
-    { name: 'USB', link: 'http://www.usb.ve/', image: "/src/assets/images/relations/USB.png" },
-    { name: 'FUNDACIÓN TAMAYO', link: "http://www.fundaciontamayo.org.ve/", image: "/src/assets/images/relations/FT.jpg" },
-    { name: 'INGEOLAN', link: "http://www.ingeolan.com/", image: "/src/assets/images/relations/INGEOLAN.png" },
+    { name: 'USB', link: 'http://www.usb.ve/', image: "/src/assets/images/relations/usb.png" },
+    { name: 'FUNDACIÓN TAMAYO', link: "http://www.fundaciontamayo.org.ve/", image: "/src/assets/images/relations/ft.jpg" },
+    { name: 'INGEOLAN', link: "http://www.ingeolan.com/", image: "/src/assets/images/relations/ingeolan.png" },
   ];
 
   public internationals: any = [
-    { name: 'OEA', link: 'http://www.oas.org/es/', image: "/src/assets/images/relations/OEA.png" },
+    { name: 'OEA', link: 'http://www.oas.org/es/', image: "/src/assets/images/relations/oea.png" },
     { name: 'UNESCO', link: 'http://es.unesco.org/',
       image: "/src/assets/images/relations/unesco.gif" },
     { name: 'PNUD', link: 'http://www.pnud.org.ve/',
-      image: "/src/assets/images/relations/Logo_PNUD_Venezuela.png" },
+      image: "/src/assets/images/relations/pnud-vzla.png" },
     { name: 'FAO', link: 'http://www.fao.org/home/es/',
-      image: "/src/assets/images/relations/FAO.jpg" },
+      image: "/src/assets/images/relations/fao.jpg" },
     { name: 'OTCA', link: 'http://www.otca.info/',
       image: "/src/assets/images/relations/otca.png" },
-    { name: 'CRATerre/EAG', link: 'http://craterre.org/', image: "/src/assets/images/relations/Craterre.png" }
+    { name: 'CRATerre/EAG', link: 'http://craterre.org/', image: "/src/assets/images/relations/craterre.png" }
   ];
 
   public members: any = [
     { name: 'UNAMAZ', link: 'http://www.unamaz.org/site/index.php',
-      image: "/src/assets/images/relations/UNAMAZ.png" },
+      image: "/src/assets/images/relations/unamaz.png" },
     { name: 'IFRAO/UNESCO', link: 'http://www.ifrao.com/ifrao/',
-      image: "/src/assets/images/relations/IFRAO.png" }
+      image: "/src/assets/images/relations/ifrao.png" }
   ]
 }
